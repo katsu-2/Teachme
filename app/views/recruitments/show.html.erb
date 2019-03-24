@@ -1,4 +1,47 @@
 <h1>詳細</h1>
-<%= @recruitment.title %>
-<%= @recruitment.content %>
+
 <%= link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'} %>
+
+<div class="content">
+  <div class="each-p">
+    <div class="p-upper">
+      <div class="p-user">
+        <p>
+          <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
+        </p>
+        <div class="user-name">
+          <p>Katsuya</p>
+        </div>
+        <div class="user-pref">
+          <p>滋賀県</p>
+        </div>
+      </div>
+      <div class="p-title">
+        <h2><%= @recruitment.title %></h2>
+      </div>
+    </div>
+    <div class="p-content">
+      <p>
+        <%= @recruitment.content %>
+      </p>
+      <div>
+        <%= link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'} %>
+        <%= link_to '編集', edit_recruitment_path(@recruitment) %>
+      </div>
+    </div>
+    <div class="p-tag">
+      <span>
+        <%= fa_icon 'clock' %>
+        2019-03-23
+      </span>
+      <span>
+        <%= fa_icon 'tag' %>
+        スポーツ
+      </span>
+      <span>
+        <%= fa_icon 'tag' %>
+        スポーツ
+      </span>
+    </div>
+  </div>
+</div>
