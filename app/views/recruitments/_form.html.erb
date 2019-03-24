@@ -1,0 +1,5 @@
+<%= form_with model: @recruitment do |f| %>
+  <%= f.text_field :title, placeholder: "タイトル" %>
+  <%= f.text_area :content, placeholder: "内容" %>
+  <%= f.submit '投稿する' %>
+<% end %>

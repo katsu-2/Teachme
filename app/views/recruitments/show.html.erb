@@ -1,0 +1,4 @@
+<h1>詳細</h1>
+<%= @recruitment.title %>
+<%= @recruitment.content %>
+<%= link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'} %>

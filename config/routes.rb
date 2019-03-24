@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   %w(about concept).each do |path|
     get path, to: "static_pages##{path}"
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :recruitments
 end
