@@ -14,3 +14,12 @@
  *= require_self
  */
 @import 'bootstrap';
+@import 'static_pages';
+
+nav {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+footer {
+  border-top: 1px solid #cfcfcf;
+}
