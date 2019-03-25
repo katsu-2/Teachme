@@ -42,7 +42,7 @@ class RecruitmentsController < ApplicationController
 
   private
     def recruitment_params
-      params.require(:recruitment).permit(:title, :content)
+      params.require(:recruitment).permit(:title, :content, :hope_day)
     end
 
     def set_recruitment

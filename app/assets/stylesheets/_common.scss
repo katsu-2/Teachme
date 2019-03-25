@@ -27,4 +27,17 @@
 }
 
 
+@mixin p {
+  border: 1px solid $orange;
+  background: $orange;
+  border-radius: 10px;
+  align-items: center;
+  padding: 3px 5px;
+  font-weight: bold;
+  color: white;
+}
 
+
+$basicGreen: #9CD75B;
+$formGreen: #9cd75ba1;
+$orange: #ff6666;

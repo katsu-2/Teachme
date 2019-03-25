@@ -93,8 +93,9 @@
 
 
 /////////////////////////
-/////////show///////////
+/////////show////////////
 /////////////////////////
+
 .each-p {
   @include border;
   width: 600px;
@@ -156,3 +157,140 @@
     }
   }
 }
+
+
+
+/////////////////////////
+/////////form////////////
+/////////////////////////
+
+.recruitment-wrap {
+
+  .recruitment-around {
+    padding: 20px 0 70px;
+
+    .recruitment-inner {
+      width: 40%;
+      margin: 0 auto;
+      background: $formGreen;
+      border: 2px solid #cfcfcf;
+      border-radius: 10px;
+      padding: 20px 20px 50px;
+
+      .recruitment-upper {
+      }
+
+      .recruitment-form {
+
+        .r-title {
+
+          .title-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            & h2 {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #495057;
+              margin-right: 10px;
+            }
+
+            & p {
+              @include p;
+            }
+          }
+
+          .title-field {
+          }
+
+        }
+
+        .r-content {
+          margin-top: 30px;
+
+          .content-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            & h2 {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #495057;
+              margin-right: 10px;
+
+            }
+
+            & p {
+              @include p;
+            }
+          }
+
+          .content-field {
+
+          }
+        }
+
+        .r-hope_day {
+          margin-top: 30px;
+
+          .hope_day-label {
+            margin-bottom: 10px;
+            display: flex;
+
+            & h2 {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #495057;
+              margin-right: 10px;
+
+            }
+          }
+
+          .hope_day-field {
+
+          }
+        }
+
+        .r-category {
+          margin-top: 30px;
+
+          .category-label {
+            margin-bottom: 10px;
+            display: flex;
+
+            & h2 {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #495057;
+              margin-right: 10px;
+
+            }
+          }
+
+          .category-field {
+
+          }
+        }
+
+        .r-submit {
+          display: flex;
+
+          .submit-btn {
+            border:1px solid $orange;
+            background: $orange;
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-weight: bold;
+            margin: 0 auto;
+            color: white;
+            width: 200px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
