@@ -1,0 +1,30 @@
+@mixin border {
+  border: 2px solid #cfcfcf;
+  border-radius: 20px;
+  padding: 13px;
+  background: #fff;
+}
+
+@mixin position {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@mixin prefecture {
+  border: 1px solid pink;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2px 3px;
+  font-size: 13px;
+  color: pink;
+}
+
+
+@mixin title {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+

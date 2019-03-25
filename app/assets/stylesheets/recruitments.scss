@@ -1,7 +1,7 @@
 // Place all the styles related to the recruitments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "common";
 
 
 /////////////////////////
@@ -29,20 +29,16 @@
       flex-wrap: wrap;
 
       .each-p {
-        border: 2px solid #cfcfcf;
-        border-radius: 20px;
-        padding: 13px;
+        @include border;
         width: 300px;
         margin: 25px auto;
-        background: #fff;
 
         .p-upper {
           display: flex;
 
           .p-user {
             p {
-              text-align: center;
-              margin-bottom: 0;
+              @include position;
 
               .user-pic {
                 width: 50px;
@@ -60,27 +56,24 @@
 
             .user-pref {
               p {
-                border: 1px solid pink;
-                border-radius: 20px;
-                text-align: center;
-                padding: 2px 3px;
-                font-size: 13px;
-                color: pink;
+                @include prefecture;
               }
             }
           }
 
           .p-title {
             h2 {
-              padding: 10px 15px;
-              font-weight: bold;
-              font-size: 1.2rem;
+              @include title;
             }
           }
         }
 
         .p-content {
           margin-top: 20px;
+
+          .link {
+            text-decoration: none
+          }
 
           p {
             color: #6c757d;
@@ -103,12 +96,9 @@
 /////////show///////////
 /////////////////////////
 .each-p {
-  border: 2px solid #cfcfcf;
-  border-radius: 20px;
-  padding: 13px;
+  @include border;
   width: 600px;
   margin: 30px auto;
-  background: #fff;
 
   .p-upper {
     display: flex;
@@ -118,8 +108,7 @@
 
     .p-user {
       p {
-        text-align: center;
-        margin-bottom: 0;
+        @include position;
 
         .user-pic {
           width: 100px;
@@ -136,21 +125,14 @@
 
       .user-pref {
         p {
-          border: 1px solid pink;
-          border-radius: 20px;
-          text-align: center;
-          padding: 2px 3px;
-          font-size: 13px;
-          color: pink;
+          @include prefecture;
         }
       }
     }
 
     .p-title {
       h2 {
-        padding: 10px 15px;
-        font-weight: bold;
-        font-size: 1.2rem;
+        @include title;
       }
     }
   }
@@ -158,13 +140,13 @@
   .p-content {
     margin: 50px 0 0 0;
     border-bottom: 3px dotted #cfcfcf;
-    // padding: 0 15px 50px;
+    padding: 0 15px 20px;
 
 
-    p {
+    & p {
       color: #6c757d;
       font-size: 1.3rem;
-      // line-height: 2.5rem;
+      line-height: 2.5rem;
     }
   }
 
