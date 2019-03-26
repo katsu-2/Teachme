@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   %w(about concept).each do |path|
     get path, to: "static_pages##{path}"
   end
+  resources :users, only: %i(index show)
   resources :recruitments
 end
