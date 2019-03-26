@@ -13,6 +13,7 @@ gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'pry-rails', '~> 0.3.9'
+gem 'devise', '~> 4.6', '>= 4.6.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
