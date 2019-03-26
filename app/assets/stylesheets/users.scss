@@ -1,3 +1,87 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/////////////////////////
+/////////show////////////
+/////////////////////////
+
+.user-wrapper {
+  .user {
+    display: flex;
+
+    .user-show {
+      width: 40%;
+
+      .user-icon {
+        & p {
+          text-align: center;
+
+          .user-pic {
+            width: 40%;
+            border-radius: 50%;
+          }
+        }
+        .user-name-type {
+          display: flex;
+          align-items: center;
+
+            .user-name {
+              margin: 0 auto;
+            }
+            .user-type {
+              border: 1px solid orange;
+              border-radius: 20px;
+              background: orange;
+              margin: 0 auto;
+              font-size: 1.3rem;
+              font-weight: bold;
+              padding: 5px 10px;
+              color: white;
+            }
+        }
+      }
+      .user-prof {
+        border: 2px solid #cfcfcf;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px 25px;
+        width: 85%;
+
+        .user-age {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-sex {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-prefecture {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-self-introduction {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .user-recruit {
+      width: 60%;
+
+    }
+  }
+}
