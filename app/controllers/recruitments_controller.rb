@@ -1,21 +1,23 @@
 class RecruitmentsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recruitments = Recruitment.all
+    @recruitments = Recruitment.includes(:user)
   end
 
   def show
+    @user = User.find_by(id: @recruitment.user_id)
   end
 
   def new
-    @recruitment = Recruitment.new
+    @recruitment = current_user.recruitments.new
   end
 
   def create
-    @recruitment = Recruitment.new(recruitment_params)
+    @recruitment = current_user.recruitments.new(recruitment_params)
     @recruitment.save
-    redirect_to recruitments_path
+    redirect_to root_path
   end
 
   def edit
@@ -24,7 +26,7 @@ class RecruitmentsController < ApplicationController
   def update
     if @recruitment.update(recruitment_params)
       flash[:notice] = '投稿に成功しました'
-      redirect_to recruitments_path
+      redirect_to root_path
     else
       render 'edit'
       flash.now[:alert] = '投稿に失敗しました'

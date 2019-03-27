@@ -1,0 +1,272 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
+
+/////////////////////////
+/////////index//////////
+/////////////////////////
+
+.index-wrapper {
+  display: flex;
+  .user-index {
+    border: 2px solid #cfcfcf;
+    border-radius: 20px;
+    padding: 13px;
+    background: #fff;
+    width: 300px;
+    margin: 25px auto;
+    .user-img {
+      & p {
+        text-align: center;
+        .user-avatar {
+        width: 40%;
+        border-radius: 50%;
+        }
+      }
+      & h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #4c4c4c;
+      }
+    }
+    .user-type {
+      display: flex;
+      align-items: center;
+      .u-pref {
+        border: 1px solid pink;
+        border-radius: 20px;
+        text-align: center;
+        padding: 2px 3px;
+        color: pink;
+        font-size: 1rem;
+        margin: 0 auto;
+      }
+      .u-p-type {
+        border: 1px solid orange;
+        border-radius: 20px;
+        background: orange;
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 5px 10px;
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/////////////////////////
+/////////show////////////
+/////////////////////////
+
+.user-wrapper {
+  .user {
+    display: flex;
+
+    .user-show {
+      width: 40%;
+
+      .user-icon {
+        & p {
+          text-align: center;
+
+          .user-pic {
+            width: 40%;
+            border-radius: 50%;
+          }
+        }
+        .user-name-type {
+          display: flex;
+          align-items: center;
+
+            .user-name {
+              margin: 0 auto;
+            }
+            .user-type {
+              border: 1px solid orange;
+              border-radius: 20px;
+              background: orange;
+              margin: 0 auto;
+              font-size: 1.3rem;
+              font-weight: bold;
+              padding: 5px 10px;
+              color: white;
+            }
+        }
+      }
+      .user-prof {
+        border: 1px solid #cfcfcf;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px 25px;
+        width: 85%;
+
+        .user-age {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-sex {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-prefecture {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+        .user-self-introduction {
+          .secret {
+            & span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .user-recruit {
+      width: 60%;
+
+    }
+  }
+}
+
+
+
+/////////////////////////
+/////////signup//////////
+/////////////////////////
+
+.form-around {
+  .signup-form {
+    box-shadow: rgba(0,0,0,0.12) 0 1px 5px;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 500px;
+    padding: 40px 0;
+    .form-title {
+      & h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 2rem;
+        margin: 40px 0;
+      }
+      & h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #4c4c4c;
+        margin: 40px;
+      }
+    }
+
+    .new-user-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .name-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-person-type {
+      display: flex;
+      .radio_button {
+        font-size: 1.2rem;
+        margin: 10px auto;
+        height: 2.6rem;
+        color: #757575;
+        .type-form {
+        }
+      }
+    }
+
+    .new-email {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .email-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-pass {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .pass-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .pass-conf {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .pass-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-submit {
+      width: 70%;
+      margin: 30px auto;
+      height: 40px;
+      .submit-btn {
+        width: 100%;
+        background: #fd5068;
+        border-radius: 30px;
+        height: 40px;
+        color: white;
+        box-shadow: 2px 2px 12px 0px;
+      }
+    }
+
+    .new-under {
+
+    }
+  }
+}
+
+
+
+
+
+
+

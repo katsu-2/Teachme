@@ -4,6 +4,7 @@
       <%= link_to 'Teachme', root_path, class: "brand-title" %>
     </div>
     <div class="navbar-button">
+      <% if user_signed_in? %>
       <ul class="navbar-right">
 
         <li class="nav-item list-inline-item">
@@ -12,26 +13,28 @@
 
         <li class="nav-item dropdown list-inline-item">
             <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Katsuya
+              <%= current_user.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to 'マイページ', '#', class: "dropdown-item " %>
+              <%= link_to 'マイページ', user_path(id: current_user.id), class: "dropdown-item " %>
 
-              <%= link_to "プロフィール編集", '#', class: "dropdown-item" %>
+              <%= link_to "プロフィール編集",  edit_user_registration_path(id: current_user.id), class: "dropdown-item" %>
 
               <div class="dropdown-divider"></div>
-              <%= link_to 'ログアウト',  '#', class: " dropdown-item" %>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "本当にいいですか？"},class: " dropdown-item" %>
             </div>
           </li>
+          <% else %>
 
           <li class="nav-item list-inline-item">
-            <%= link_to 'サインアップ', '#', class: "nav-link" %>
+            <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link" %>
           </li>
 
           <li class="list-inline-item">
-            <%= link_to 'ログイン', '#', class: "nav-link", id: "login-show" %>
+            <%= link_to 'ログイン', new_user_session_path, class: "nav-link", id: "login-show" %>
           </li>
       </ul>
+      <% end %>
     </div>
   </div>
 </nav>

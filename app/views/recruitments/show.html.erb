@@ -7,10 +7,10 @@
           <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
         </p>
         <div class="user-name">
-          <p>Katsuya</p>
+          <p><%= link_to @recruitment.user.name, user_path(@user) %></p>
         </div>
         <div class="user-pref">
-          <p>滋賀県</p>
+          <p><%= @recruitment.user.prefecture %></p>
         </div>
       </div>
       <div class="p-title">
