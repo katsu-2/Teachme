@@ -1,6 +1,67 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
+
+/////////////////////////
+/////////index//////////
+/////////////////////////
+
+.index-wrapper {
+  display: flex;
+  .user-index {
+    border: 2px solid #cfcfcf;
+    border-radius: 20px;
+    padding: 13px;
+    background: #fff;
+    width: 300px;
+    margin: 25px auto;
+    .user-img {
+      & p {
+        text-align: center;
+        .user-avatar {
+        width: 40%;
+        border-radius: 50%;
+        }
+      }
+      & h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #4c4c4c;
+      }
+    }
+    .user-type {
+      display: flex;
+      align-items: center;
+      .u-pref {
+        border: 1px solid pink;
+        border-radius: 20px;
+        text-align: center;
+        padding: 2px 3px;
+        color: pink;
+        font-size: 1rem;
+        margin: 0 auto;
+      }
+      .u-p-type {
+        border: 1px solid orange;
+        border-radius: 20px;
+        background: orange;
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 5px 10px;
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
 
 /////////////////////////
 /////////show////////////
