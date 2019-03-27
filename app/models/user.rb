@@ -20,4 +20,9 @@ class User < ApplicationRecord
 
   enum person_type: { 受講者: 0, 指導者: 1 }
   enum sex: { 男性: 0, 女性: 1 }
+
+  #validation
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :email, presence: true, uniqueness: true
+
 end

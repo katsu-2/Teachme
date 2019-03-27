@@ -1,5 +1,5 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe RecruitmentsController, type: :controller do
+# RSpec.describe RecruitmentsController, type: :controller do
 
-end
+# end
