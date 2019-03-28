@@ -37,14 +37,12 @@
             <%= fa_icon 'clock' %>
             <%= recruitment.hope_day %>
           </span>
-          <span>
-            <%= fa_icon 'tag' %>
-            スポーツ
-          </span>
-          <span>
-            <%= fa_icon 'tag' %>
-            スポーツ
-          </span>
+          <% recruitment.recruitment_categories.each do |r_category| %>
+            <span>
+              <%= fa_icon 'tag' %>
+              <%= r_category.category.name %>
+            </span>
+          <% end %>
         </div>
       </div>
       <% end %>

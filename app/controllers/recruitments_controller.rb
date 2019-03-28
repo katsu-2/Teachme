@@ -12,6 +12,7 @@ class RecruitmentsController < ApplicationController
 
   def new
     @recruitment = current_user.recruitments.new
+    @recruitment.recruitment_categories.new
   end
 
   def create
@@ -44,7 +45,7 @@ class RecruitmentsController < ApplicationController
 
   private
     def recruitment_params
-      params.require(:recruitment).permit(:title, :content, :hope_day)
+      params.require(:recruitment).permit(:title, :content, :hope_day, category_ids: [])
     end
 
     def set_recruitment
