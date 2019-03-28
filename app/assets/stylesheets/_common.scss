@@ -37,6 +37,15 @@
   color: white;
 }
 
+@mixin user-index {
+  border: 2px solid #cfcfcf;
+  border-radius: 20px;
+  padding: 13px;
+  background: #fff;
+  width: 300px;
+  margin: 25px auto;
+}
+
 
 $basicGreen: #9CD75B;
 $formGreen: #9cd75ba1;
