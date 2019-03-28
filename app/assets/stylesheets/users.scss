@@ -89,6 +89,7 @@
 
             .user-name {
               margin: 0 auto;
+              font-size: 1.3rem;
             }
             .user-type {
               border: 1px solid orange;
@@ -107,6 +108,7 @@
         border-radius: 10px;
         margin: 20px auto;
         padding: 20px 25px;
+        background: white;
         width: 85%;
 
         .user-age {
@@ -159,6 +161,7 @@
     border: 1px solid #cfcfcf;
     border-radius: 10px;
     margin: 40px auto;
+    background: white;
     width: 500px;
     padding: 40px 0;
     .form-title {
