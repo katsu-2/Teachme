@@ -3,6 +3,13 @@
   <div class="top-upper">
     <%= image_tag("sports.jpg", :alt => "アプリのイメージ画像", :class => "upper-pic") %>
   </div>
+  <div class="type-btn">
+    <div class="type-btn-wrap">
+      <li><%= link_to '全投稿' %></li>
+      <li><%= link_to '指導者', teacher_index_path %></li>
+      <li><%= link_to '受講者' %></li>
+    </div>
+  </div>
   <section class="main">
     <div class="main-upper"></div>
     <div class="main-p">

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'teacher/index'
   devise_for :users
   root 'recruitments#index'
   %w(about concept).each do |path|
