@@ -18,7 +18,7 @@ class RecruitmentsController < ApplicationController
   def create
     @recruitment = current_user.recruitments.new(recruitment_params)
     @recruitment.save
-    redirect_to root_path
+    redirect_to recruitments_path
   end
 
   def edit
