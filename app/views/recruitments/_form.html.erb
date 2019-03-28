@@ -38,10 +38,7 @@
               <h2>カテゴリー</h2>
             </div>
             <div class="category-field">
-              <p>aaa</p>
-              <p>aaa</p>
-              <p>aaa</p>
-              <p>aaa</p>
+              <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
             </div>
           </div>
           <div class="r-submit">
