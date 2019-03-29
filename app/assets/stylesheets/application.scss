@@ -18,6 +18,13 @@
 @import 'static_pages';
 @import 'recruitments';
 @import 'users';
+@import 'student';
+
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+}
 
 nav {
   border-bottom: 1px solid #cfcfcf;

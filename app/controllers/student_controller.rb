@@ -4,5 +4,6 @@ class StudentController < ApplicationController
     @users = User.where("person_type = 0")
     @users.each do |user|
       @students << user
+    end
   end
 end

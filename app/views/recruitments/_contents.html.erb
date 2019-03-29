@@ -1,0 +1,7 @@
+<div class="p-content">
+  <%= link_to recruitment_path(recruitment), class: "link" do %>
+  <p>
+    <%= truncate(recruitment.content, length: 35) %>
+  </p>
+  <% end %>
+</div>
