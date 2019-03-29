@@ -3,8 +3,8 @@
   <%= render 'recruitments/upper' %>
   <section class="main">
     <div class="main-p">
-      <% @teachers.each do |teacher| %>
-        <% teacher.recruitments.each do |recruitment| %>
+      <% @students.each do |student| %>
+        <% student.recruitments.each do |recruitment| %>
           <div class="each-p">
             <div class="p-upper">
               <div class="p-user">
@@ -12,10 +12,10 @@
                   <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
                 </p>
                 <div class="user-name">
-                  <p><%= teacher.name %></p>
+                  <p><%= student.name %></p>
                 </div>
                 <div class="user-pref">
-                  <p><%= teacher.prefecture %></p>
+                  <p><%= student.prefecture %></p>
                 </div>
               </div>
               <div class="p-title">
