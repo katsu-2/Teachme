@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'student/index'
   get 'teacher/index'
   devise_for :users
   root 'recruitments#index'
