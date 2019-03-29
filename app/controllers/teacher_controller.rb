@@ -1,4 +1,4 @@
-class TeacherController < RecruitmentsController
+class TeacherController < ApplicationController
   def index
     @teachers = []
     @users = User.where("person_type = 1")
