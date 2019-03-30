@@ -46,7 +46,12 @@
   margin: 25px auto;
 }
 
+@mixin borderSimple {
+  border: 1px solid #cfcfcf;
+}
+
 
 $basicGreen: #9CD75B;
 $formGreen: #9cd75ba1;
 $orange: #ff6666;
+$tcolor: #fd5068;

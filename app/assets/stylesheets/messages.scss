@@ -1,3 +1,65 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
+
+
+.message-wrap {
+  .message-around {
+    width: 60%;
+    margin: 0 auto;
+    @include borderSimple
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background: white;
+    .message-upper {
+      @include borderSimple
+      & p {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin: auto;
+      }
+    }
+
+    .message-main {
+      height: 600px;
+
+      .content {
+        padding: 10px 20px;
+        .message-user {
+          & p {
+            margin-bottom: 5px;
+
+          }
+        }
+        .message {
+          & p {
+            border: 1px solid #cfcfcf;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 5px;
+
+          }
+        }
+      }
+    }
+
+    .message-form {
+      @include borderSimple
+      height: 50px;
+      .form-message {
+        height: 45px;
+        width: 80%
+      }
+      .submit-btn {
+        background: $tcolor;
+        border: 1px;
+        padding: 5px 15px;
+        height: 47px;
+        color: white;
+        width: 10%;
+      }
+    }
+  }
+}

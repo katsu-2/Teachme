@@ -3,10 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "common";
 
+/////////////////////////
+/////////show////////////
+/////////////////////////
 
-
-.message-wrap {
-  .message-around {
+.group-wrap {
+  .group-around {
       width: 70%;
       margin: 0 auto;
       border: 1px solid #cfcfcf;
@@ -47,3 +49,8 @@
     }
   }
 }
+
+
+/////////////////////////
+/////////show////////////
+/////////////////////////
