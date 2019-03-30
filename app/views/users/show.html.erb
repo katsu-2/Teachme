@@ -31,6 +31,17 @@
           </p>
         </div>
       </div>
+      <div class="message-btn">
+        <% if user_signed_in? && current_user.id == @user.id %>
+          <h2 class="message">
+            メッセージ
+          </h2>
+        <% else %>
+          <h2 class="message">
+            メッセージを送る
+          </h2>
+        <% end %>
+      </div>
     </div>
     <div class="user-recruit">
 

@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
 
   end
 
-  def new
+  def create
 
   end
 end

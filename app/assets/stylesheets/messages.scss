@@ -24,7 +24,7 @@
 
     .message-main {
       height: 600px;
-
+      overflow: scroll;
       .content {
         padding: 10px 20px;
         .message-user {
