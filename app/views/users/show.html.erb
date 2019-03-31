@@ -1,4 +1,3 @@
-
 <div class="user-wrapper">
   <div class="user">
     <div class="user-show">
@@ -34,7 +33,7 @@
       <div class="message-btn">
         <% if user_signed_in? && current_user.id == @user.id %>
           <h2 class="message">
-            メッセージ
+            <%= link_to 'メッセージ', groups_path %>
           </h2>
         <% else %>
           <h2 class="message">
