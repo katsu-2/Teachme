@@ -1,13 +1,13 @@
 $(function() {
   function buildHTML(message) {
     var html = `<div class="content">
-              <div class="message-user">
-                <p>${message.user_name}</p>
-              </div>
-              <div class="message">
-                <p>${message.message}</p>
-              </div>
-            </div>`
+                  <div class="message-user">
+                    <p>${message.user_name}</p>
+                  </div>
+                  <div class="message">
+                    <p>${message.message}</p>
+                  </div>
+                </div>`
     return html;
   }
 
