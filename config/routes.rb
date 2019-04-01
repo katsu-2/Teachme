@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: %i(index show)
   resources :recruitments
+  resources :groups do
+    resources :messages, only: %i(index create)
+  end
 end

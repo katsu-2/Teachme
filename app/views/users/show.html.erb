@@ -1,4 +1,3 @@
-
 <div class="user-wrapper">
   <div class="user">
     <div class="user-show">
@@ -30,6 +29,17 @@
             <span>自己紹介</span> <%= @user.self_introduction %>
           </p>
         </div>
+      </div>
+      <div class="message-btn">
+        <% if user_signed_in? && current_user.id == @user.id %>
+          <h2 class="message">
+            <%= link_to 'メッセージ', groups_path %>
+          </h2>
+        <% else %>
+          <h2 class="message">
+            メッセージを送る
+          </h2>
+        <% end %>
       </div>
     </div>
     <div class="user-recruit">

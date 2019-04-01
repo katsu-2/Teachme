@@ -1,0 +1,56 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
+
+/////////////////////////
+/////////index////////////
+/////////////////////////
+
+.group-wrap {
+  .group-around {
+      width: 70%;
+      margin: 0 auto;
+      border: 1px solid #cfcfcf;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+    .each-message {
+      height: 100px;
+      border-bottom: 1px solid #cfcfcf;
+      padding: 10px;
+      display: flex;
+      .your-img {
+        width: 20%;
+        & p {
+          .user-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 60%;
+          }
+        }
+      }
+      .your-content {
+        width: 80%;
+        .your-name {
+          & h2 {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2b546a;
+          }
+        }
+        .your-message {
+          & h2 {
+            font-size: 1.3rem;
+            color: #6c757d;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/////////////////////////
+/////////show////////////
+/////////////////////////
