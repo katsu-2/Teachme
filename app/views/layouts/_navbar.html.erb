@@ -1,37 +1,37 @@
 <nav class="header sticky-top">
   <div class="navbar">
-    <div class="navbar-brand">
+    <div class="nav-brand">
       <%= link_to 'Teachme', root_path, class: "brand-title" %>
     </div>
     <div class="navbar-button">
       <% if user_signed_in? %>
       <ul class="navbar-right">
 
-        <li class="nav-item list-inline-item">
+        <li class="nav-item list-inline-item nav-p">
             <%= link_to '投稿', new_recruitment_path, class: "nav-link" %>
         </li>
 
-        <li class="nav-item dropdown list-inline-item">
-            <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.name %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to 'マイページ', user_path(id: current_user.id), class: "dropdown-item " %>
+        <li class="nav-item dropdown list-inline-item nav-d">
+          <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %>
+          </a>
+          <div class="dropdown-menu nav-m" aria-labelledby="navbarDropdown">
+            <%= link_to 'マイページ', user_path(id: current_user.id), class: "dropdown-item nav-i" %>
 
-              <%= link_to "プロフィール編集",  edit_user_registration_path(id: current_user.id), class: "dropdown-item" %>
+            <%= link_to "プロフィール編集",  edit_user_registration_path(id: current_user.id), class: "dropdown-item nav-i" %>
 
-              <div class="dropdown-divider"></div>
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "本当にいいですか？"},class: " dropdown-item" %>
-            </div>
+            <div class="dropdown-divider"></div>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "本当にいいですか？"},class: " dropdown-item nav-i" %>
+          </div>
+        </li>
+      <% else %>
+
+          <li class=" list-inline-item nav-l">
+            <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link nav-a" %>
           </li>
-          <% else %>
 
-          <li class="nav-item list-inline-item">
-            <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link" %>
-          </li>
-
-          <li class="list-inline-item">
-            <%= link_to 'ログイン', new_user_session_path, class: "nav-link", id: "login-show" %>
+          <li class="list-inline-item nav-l">
+            <%= link_to 'ログイン', new_user_session_path, class: "nav-link nav-a", id: "login-show" %>
           </li>
       </ul>
       <% end %>
