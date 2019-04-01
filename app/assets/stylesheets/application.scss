@@ -66,7 +66,7 @@ h3 {
           }
           .nav-m {
             .nav-i {
-              color: pink;
+              color: #2B556A;
             }
           }
         }
@@ -76,6 +76,9 @@ h3 {
 }
 
 
+/////////////////////////
+/////////navbar//////////
+/////////////////////////
 
 
 
@@ -85,4 +88,13 @@ h3 {
 footer {
   border-top: 1px solid #cfcfcf;
   height: 60px;
+  .text-center {
+    ul {
+      li {
+        a {
+          color: pink;
+        }
+      }
+    }
+  }
 }
