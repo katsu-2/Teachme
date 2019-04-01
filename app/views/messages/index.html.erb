@@ -16,7 +16,7 @@
       <% end %>
     </div>
     <div class="message-form">
-      <%= form_for [@group, @message], html: { id: 'new-message' } do |f| %>
+      <%= form_for [@group, @message], html: { id: 'new_message' } do |f| %>
         <%= f.text_field :message, class: "form-message", id: "message_js", placeholder: "type a message" %>
         <%= f.submit '送信', class: "submit-btn" %>
       <% end %>
