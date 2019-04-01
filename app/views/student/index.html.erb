@@ -35,12 +35,10 @@
                 <%= fa_icon 'clock' %>
                 希望日: <%= recruitment.hope_day %>
               </span>
-              <% recruitment.recruitment_categories.each do |r_category| %>
                 <span>
                   <%= fa_icon 'tag' %>
-                  <%= r_category.category.name %>
+                  <%= recruitment.categories.name %>
                 </span>
-              <% end %>
             </div>
           </div>
         <% end %>
