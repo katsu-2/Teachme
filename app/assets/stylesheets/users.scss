@@ -185,6 +185,7 @@
         font-weight: 600;
         font-size: 2rem;
         margin: 40px 0;
+        color: pink;
       }
       & h2 {
         text-align: center;
@@ -273,6 +274,18 @@
         height: 40px;
         color: white;
         box-shadow: 2px 2px 12px 0px;
+      }
+    }
+
+    .new-prefecture {
+      label {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #495057;
+        margin-right: 10px;
+      }
+      select {
+
       }
     }
 

@@ -38,7 +38,7 @@
               <h2>カテゴリー</h2>
             </div>
             <div class="category-field">
-              <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+              <%= f.collection_select :category_ids, Category.all, :id, :name %>
             </div>
           </div>
           <div class="r-submit">

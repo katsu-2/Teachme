@@ -28,15 +28,73 @@ h3 {
   font-weight: bold;
 }
 
-nav {
-  border-bottom: 1px solid #cfcfcf;
-}
-
 .all-around {
   background: #F8F9FA;
 }
 
+
+/////////////////////////
+/////////navbar//////////
+/////////////////////////
+
+
+.header {
+  border-bottom: 1px solid #cfcfcf;
+  .navbar {
+    .nav-brand {
+      .brand-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 100px;
+        color: pink;
+        text-decoration: none;
+      }
+    }
+    .navbar-button {
+      .navbar-right {
+        margin-right: 70px;
+        .nav-p {
+          .nav-link {
+            color: pink;
+            font-size: 1.1rem;
+          }
+        }
+        .nav-d {
+          & a {
+            color: pink;
+            font-size: 1.1rem;
+          }
+          .nav-m {
+            .nav-i {
+              color: #2B556A;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/////////////////////////
+/////////navbar//////////
+/////////////////////////
+
+
+
+
+
+
 footer {
   border-top: 1px solid #cfcfcf;
   height: 60px;
+  .text-center {
+    ul {
+      li {
+        a {
+          color: pink;
+        }
+      }
+    }
+  }
 }
