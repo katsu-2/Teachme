@@ -1,13 +1,12 @@
 class GroupsController < ApplicationController
 
   def index
-    @currentGroupUsers = current_user.group_users
+    @currentGroupUsers = current_user.group_users.includes(:group)
     myGroupIds = []
 
     @currentGroupUsers.each do |c_user|
       myGroupIds << c_user.group.id
     end
-
 
   end
 
