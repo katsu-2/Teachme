@@ -31,15 +31,9 @@
         </div>
       </div>
       <div class="message-btn">
-        <% if user_signed_in? && current_user.id == @user.id %>
-          <h2 class="message">
-            <%= link_to 'メッセージ', groups_path %>
-          </h2>
-        <% else %>
-          <h2 class="message">
-            メッセージを送る
-          </h2>
-        <% end %>
+        <h2 class="message">
+          <%= link_to 'メッセージ', groups_path %>
+        </h2>
       </div>
     </div>
     <div class="user-recruit">
