@@ -1,19 +1,14 @@
 class GroupsController < ApplicationController
 
   def index
-    @currentGroupUsers = current_user.group_users.includes(:group)
-    myGroupIds = []
+    @currentGroupUsers = current_user.group_users
+    @myGroupIds = []
 
-    @currentGroupUsers.each do |c_user|
-      myGroupIds << c_user.group.id
+    @currentGroupUsers.includes(:group).each do |group|
+      @myGroupIds << group.group.id
     end
 
-    @anotherGroupUsers = GroupUser.where(group_id: myGroupIds).where(user_id: @user_id)
-
-    group = Group.find_by(id: params[:id])
-    @group_user = GroupUser.where.not(user_id: current_user.id).first.user
-    @messages = Message.where(group: group).order(:created_at)
-
+    @anotherGroupUsers = GroupUser.where(group_id: @myGroupIds).where.not(user_id: current_user.id)
   end
 
 
