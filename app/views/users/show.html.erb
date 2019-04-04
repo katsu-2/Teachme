@@ -15,20 +15,7 @@
         </div>
       </div>
       <div class="user-prof">
-        <div class="user-age">
-          <p class="secret"><span>都道府県</span> <%= @user.prefecture %></p>
-        </div>
-        <div class="user-sex">
-          <p class="secret"><span>年齢</span> <%= @user.age %>歳</p>
-        </div>
-        <div class="user-prefecture">
-          <p class="secret"><span>性別</span> <%= @user.sex %></p>
-        </div>
-        <div class="user-self-introduction">
-          <p class="secret">
-            <span>自己紹介</span> <%= @user.self_introduction %>
-          </p>
-        </div>
+        <%= render 'prof' %>
       </div>
       <div class="message-btn">
         <%= render 'messages/message' %>
