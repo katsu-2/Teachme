@@ -1,0 +1,7 @@
+<h2 class="message">
+  <%= form_tag("/groups", method: :post) do %>
+    <input name="group[user_ids][]" type="hidden" value="<%= @user.id %>"/>
+    <input name="group[user_ids][]" type="hidden" value="<%= current_user.id %>" />
+    <%= submit_tag 'メッセージ' %>
+  <% end %>
+</h2>

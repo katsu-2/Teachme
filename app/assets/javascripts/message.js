@@ -45,9 +45,9 @@ $(function() {
     });
   });
 
-      $(function() {
-      setInterval(update, 4000);
-    });
+    //   $(function() {
+    //   setInterval(update, 4000);
+    // });
 
     function update() {
     $.ajax({
