@@ -6,6 +6,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @recruitments = Recruitment.where(user_id: @user_id)
+    @recruitments = current_user.recruitments
   end
 end
