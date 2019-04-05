@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Teachme</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,11 +11,7 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-      <% if flash.notice.present? %>
-        <div class="alert alert-success">
-          <%= flash.notice %>
-        </div>
-      <% end %>
+    <%= render 'layouts/flash' %>
       <div class="all-around">
         <%= yield %>
       </div>
