@@ -5,7 +5,7 @@
   <div class="user-index">
     <div class="user-img">
       <p>
-        <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-avatar") %>
+        <%= render partial: "shared/img", locals: { user: user } %>
       </p>
       <h2><%= user.name %></h2>
     </div>
