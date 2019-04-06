@@ -1,0 +1,5 @@
+<% if user.img.present? %>
+  <%= image_tag user.img.url, :class => "user-pic" %>
+<% else %>
+  <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic user-avatar") %>
+<% end %>
