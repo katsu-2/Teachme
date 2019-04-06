@@ -8,6 +8,9 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="new-user-img">
+      <p>
+        <%= render partial: "shared/img", locals: { user: @user } %>
+      </p>
       <%= f.file_field :img, class: "img-form" %>
     </div>
 

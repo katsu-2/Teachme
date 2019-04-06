@@ -8,7 +8,6 @@
 /////////////////////////
 
 
-
 .index-wrapper {
   display: flex;
   .user-index {
@@ -194,7 +193,13 @@
         margin: 40px;
       }
     }
-
+    p {
+      text-align: center;
+      .user-avatar {
+      width: 40%;
+      border-radius: 50%;
+      }
+    }
     .new-user-name {
       display: flex;
       flex-direction: column;
