@@ -17,8 +17,7 @@
       & p {
         text-align: center;
         .user-avatar {
-        width: 40%;
-        border-radius: 50%;
+        @include avatar;
         }
       }
       & h2 {
@@ -76,8 +75,7 @@
           text-align: center;
 
           .user-pic {
-            width: 40%;
-            border-radius: 50%;
+            @include avatar
           }
         }
         .user-name-type {
@@ -196,7 +194,9 @@
     p {
       text-align: center;
       .user-avatar {
-      width: 40%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
       border-radius: 50%;
       }
     }

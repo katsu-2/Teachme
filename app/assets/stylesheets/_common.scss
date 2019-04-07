@@ -50,6 +50,13 @@
   border: 1px solid #cfcfcf;
 }
 
+@mixin avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 
 $basicGreen: #9CD75B;
 $formGreen: #9cd75ba1;
