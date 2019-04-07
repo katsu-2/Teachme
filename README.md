@@ -1,24 +1,17 @@
-# README
+# 指導者と受講希望者を繋ぐSNS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## コンセプト
+何かを学びたい人と教えられる何かを持っている人を繋いで、技術の向上を目指すことを目的としています。
 
-Things you may want to cover:
 
-* Ruby version
+例えば、サッカー経験者とサッカーのドリブルを教えて欲しい人を繋いだり、私服に自信が無いから買い物に一緒に付き合ってくれる人と服が好きで自信のある人を繋ぐアプリです。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##実装した機能
+・deviseを使用したログイン機能
+・記事投稿機能
+・記事詳細機能
+・記事削除、編集機能
+・トークルーム作成機能
+・メッセージ機能
+・カテゴリー機能
+・画像投稿機能
