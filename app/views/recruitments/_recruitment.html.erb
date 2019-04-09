@@ -1,37 +1,3 @@
 <% recruitments.each do |recruitment| %>
-  <div class="each-p">
-    <div class="p-upper">
-      <div class="p-user">
-        <p>
-          <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
-        </p>
-        <div class="user-name">
-          <p><%= recruitment.user.name %></p>
-        </div>
-        <div class="user-pref">
-          <p><%= recruitment.user.prefecture %></p>
-        </div>
-      </div>
-      <div class="p-title">
-        <h2><%= truncate(recruitment.title, length: 20) %></h2>
-      </div>
-    </div>
-    <div class="p-content">
-      <%= link_to recruitment_path(recruitment), class: "link" do %>
-      <p>
-        <%= truncate(recruitment.content, length: 35) %>
-      </p>
-      <% end %>
-    </div>
-    <div class="p-tag">
-      <span>
-        <%= fa_icon 'clock' %>
-        希望日: <%= recruitment.hope_day %>
-      </span>
-      <span>
-        <%= fa_icon 'tag' %>
-        <%= recruitment.categories.name %>
-      </span>
-    </div>
-  </div>
+  <%= render 'shared/recruitment', recruitment: recruitment, user: recruitment.user %>
 <% end %>
