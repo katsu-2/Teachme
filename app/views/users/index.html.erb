@@ -2,6 +2,7 @@
 
 <div class="index-wrapper">
   <% @users.each do |user| %>
+  <%= link_to user_path(user) do %>
   <div class="user-index">
     <div class="user-img">
       <p>
@@ -14,6 +15,7 @@
       <p class="u-p-type"><%= user.person_type %></p>
     </div>
   </div>
+  <% end %>
   <% end %>
 </div>
 
