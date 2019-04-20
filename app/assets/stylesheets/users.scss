@@ -10,6 +10,20 @@
 
 .index-wrapper {
   display: flex;
+  flex-wrap: wrap;
+
+  @include sp {
+    display: flex;
+    flex-wrap: wrap;
+  };
+
+  a {
+    margin: auto;
+    @include sp {
+      margin: auto;
+    };
+  }
+
   .user-index {
     @include user-index;
 
