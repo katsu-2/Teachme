@@ -65,10 +65,17 @@
 
 .user-wrapper {
   .user {
-    display: flex;
+    @include pc {
+      display: flex;
+    };
 
     .user-show {
       width: 40%;
+
+      @include sp {
+        width: 100%;
+        padding-top: 30px;
+      };
 
       .user-icon {
         & p {
@@ -85,6 +92,11 @@
             .user-name {
               margin: 0 auto;
               font-size: 1.3rem;
+
+              @include sp {
+                font-size: 1.6rem;
+                font-weight: bold;
+              };
             }
             .user-type {
               border: 1px solid orange;
@@ -105,38 +117,14 @@
         padding: 20px 25px;
         background: white;
         width: 85%;
-
-        .user-age {
-          .secret {
-            & span {
-              font-weight: bold;
-            }
-          }
-        }
-        .user-sex {
-          .secret {
-            & span {
-              font-weight: bold;
-            }
-          }
-        }
-        .user-prefecture {
-          .secret {
-            & span {
-              font-weight: bold;
-            }
-          }
-        }
-        .user-self-introduction {
-          .secret {
-            & span {
-              font-weight: bold;
-            }
-          }
-        }
       }
 
       .message-btn {
+
+        @include sp {
+          height: 50px;
+        };
+
         .message {
           text-align: center;
           font-size: 1rem;
@@ -149,7 +137,17 @@
           & a {
             text-decoration: none;
             color: white;
+
+            @include sp {
+              line-height: 1.5;
+              font-size: 1.3rem;
+            };
           }
+
+          @include sp {
+            width: 100%;
+            height: 35px;
+          };
         }
       }
     }
@@ -157,6 +155,9 @@
     .user-recruit {
       width: 60%;
 
+      @include sp {
+        width: 100%;
+      };
     }
   }
 }
@@ -176,6 +177,10 @@
     background: white;
     width: 500px;
     padding: 40px 0;
+
+    @include sp {
+      width: 100%;
+    };
     .form-title {
       & h1 {
         text-align: center;
