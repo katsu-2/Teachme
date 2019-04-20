@@ -1,3 +1,18 @@
+$pc: 768px;
+$sp: 767px;
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 @mixin border {
   border: 2px solid #cfcfcf;
   border-radius: 20px;
@@ -55,6 +70,28 @@
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.secret {
+
+  @include sp {
+    position: relative;
+  };
+
+  & strong {
+    font-weight: bold;
+    @include sp {
+      font-size: 1.5rem;
+    };
+  }
+  span {
+    @include sp {
+      position: absolute;
+      left: 30%;
+      color: #2b546a;
+      font-size: 1.2rem;
+    };
+  }
 }
 
 

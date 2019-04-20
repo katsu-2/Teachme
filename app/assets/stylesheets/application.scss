@@ -21,6 +21,7 @@
 @import 'student';
 @import 'groups';
 @import 'messages';
+@import 'common';
 
 
 h3 {
@@ -30,6 +31,10 @@ h3 {
 
 .all-around {
   background: #F8F9FA;
+
+  @include sp {
+    background: #ff666617;
+  };
 }
 
 
