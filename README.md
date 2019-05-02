@@ -1,6 +1,12 @@
 # 指導者と受講希望者を繋ぐSNS
 https://teachme-original.herokuapp.com/
 
+## アカウント
+email: tester@gmail.com
+
+password: 111111
+
+
 ## コンセプト
 何かを学びたい人と教えられる何かを持っている人を繋いで、技術の向上を目指すことを目的としています。
 
