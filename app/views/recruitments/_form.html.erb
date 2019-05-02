@@ -38,7 +38,8 @@
               <h2>カテゴリー</h2>
             </div>
             <div class="category-field">
-              <%= f.collection_select :category_ids, Category.all, :id, :name %>
+              <!-- <%= f.collection_select :category_ids, Category.all, :id, :name %> -->
+              <%= f.select :category_ids, Category.categories %>
             </div>
           </div>
           <div class="r-submit">
