@@ -3,12 +3,13 @@ class RecruitmentsController < ApplicationController
   before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recruitments = Recruitment.includes(:user).includes(:recruitment_categories)
+    @recruitments = Recruitment.includes(:user)
     # binding.pry
   end
 
   def show
     @user = User.find_by(id: @recruitment.user_id)
+    # binding.pry
   end
 
   def new
