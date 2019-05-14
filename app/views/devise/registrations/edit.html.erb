@@ -44,11 +44,15 @@
     </div>
 
     <div class="new-sex">
-      性別:
-      <%= f.label '男性' %>
+      <div class="l-sex">
+        <%= f.label :性別, class: "sex" %>
+      </div>
+      <div class="but-sex">
+        <%= f.label '男性' %>
       <%= f.radio_button :sex, :男性 %>
       <%= f.label '女性' %>
       <%= f.radio_button :sex, :女性 %>
+      </div>
     </div>
 
     <div class="new-self-introduction">

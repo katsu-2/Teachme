@@ -77,6 +77,23 @@ $sp: 767px;
   }
 }
 
+@mixin edit {
+  label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #495057;
+    margin-right: 10px;
+    margin: auto;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+  select {
+    margin: auto;
+  }
+}
+
 .secret {
 
   @include sp {
