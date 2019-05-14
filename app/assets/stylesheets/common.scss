@@ -70,6 +70,11 @@ $sp: 767px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+
+  @include sp {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .secret {
@@ -81,7 +86,7 @@ $sp: 767px;
   & strong {
     font-weight: bold;
     @include sp {
-      font-size: 1.5rem;
+      font-size: 1rem;
     };
   }
   span {
@@ -89,7 +94,7 @@ $sp: 767px;
       position: absolute;
       left: 30%;
       color: #2b546a;
-      font-size: 1.2rem;
+      font-size: 1rem;
     };
   }
 }
