@@ -1,6 +1,7 @@
 <div class="each-p">
   <div class="p-upper">
     <div class="p-user">
+      <%= link_to user_path(user) do %>
       <p>
         <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
       </p>
@@ -10,6 +11,7 @@
       <div class="user-pref">
         <p><%= user.prefecture %></p>
       </div>
+      <% end %>
     </div>
     <div class="p-title">
       <h2><%= truncate(recruitment.title, length: 20) %></h2>
