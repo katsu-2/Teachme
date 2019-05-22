@@ -1,10 +1,8 @@
 <% provide(:title, "募集一覧") %>
 
-<div class="wrapper">
   <%= render 'upper' %>
   <section class="main">
     <div class="main-p">
       <%= render partial: 'recruitment', locals: { recruitments: @recruitments } %>
     </div>
   </section>
-</div>

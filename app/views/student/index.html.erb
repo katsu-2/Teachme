@@ -1,6 +1,5 @@
 <% provide(:title, "受講者投稿一覧") %>
 
-<div class="wrapper">
   <%= render 'recruitments/upper' %>
   <section class="main">
     <h3>受講者投稿一覧</h3>
@@ -8,4 +7,3 @@
       <%= render partial: 'main', locals: { students: @students, recruitments: @recruitments } %>
     </div>
   </section>
-</div>
