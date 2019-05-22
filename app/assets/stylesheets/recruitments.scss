@@ -111,9 +111,13 @@
             }
           }
 
-          .p-title {
-            h2 {
-              @include title;
+          a {
+            text-decoration: none;
+            color: black;
+            .p-title {
+              h2 {
+                @include title;
+              }
             }
           }
         }

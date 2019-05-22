@@ -13,9 +13,11 @@
       </div>
       <% end %>
     </div>
+    <%= link_to recruitment_path(recruitment), class: "link" do %>
     <div class="p-title">
       <h2><%= truncate(recruitment.title, length: 20) %></h2>
     </div>
+    <% end %>
   </div>
   <div class="p-content">
     <%= link_to recruitment_path(recruitment), class: "link" do %>
