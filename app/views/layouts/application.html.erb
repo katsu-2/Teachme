@@ -15,7 +15,9 @@
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flash' %>
       <div class="all-around">
-        <%= yield %>
+        <div class="wrapper">
+          <%= yield %>
+        </div>
       </div>
     <%= render 'layouts/footer' %>
   </body>
