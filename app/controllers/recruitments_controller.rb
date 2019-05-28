@@ -4,23 +4,25 @@ class RecruitmentsController < ApplicationController
 
   def index
     @recruitments = Recruitment.includes(:user)
-    # binding.pry
   end
 
   def show
     @user = User.find_by(id: @recruitment.user_id)
-    # binding.pry
   end
 
   def new
     @recruitment = current_user.recruitments.new
-    @recruitment.recruitment_categories.new
   end
 
   def create
     @recruitment = current_user.recruitments.new(recruitment_params)
-    @recruitment.save
-    redirect_to recruitments_path
+    if @recruitment.save
+      flash[:notice] = '投稿に成功しました'
+      redirect_to recruitments_path
+    else
+      flash.now[:alert] = '必須項目を入力してください'
+      render 'new'
+    end
   end
 
   def edit
@@ -28,11 +30,11 @@ class RecruitmentsController < ApplicationController
 
   def update
     if @recruitment.update(recruitment_params)
-      flash[:notice] = '投稿に成功しました'
+      flash[:notice] = '編集に成功しました'
       redirect_to root_path
     else
       render 'edit'
-      flash.now[:alert] = '投稿に失敗しました'
+      flash.now[:alert] = '編集に失敗しました'
     end
   end
 
