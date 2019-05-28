@@ -323,6 +323,11 @@
     .new-prefecture {
       display: flex;
       @include edit;
+
+      .pre-btn {
+        background: #fd5068;
+        color: white;
+      }
     }
 
     .new-age {
