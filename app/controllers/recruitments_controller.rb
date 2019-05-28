@@ -20,8 +20,8 @@ class RecruitmentsController < ApplicationController
       flash[:notice] = '投稿に成功しました'
       redirect_to recruitments_path
     else
-      flash.now[:alert] = '必須項目を入力してください'
       render 'new'
+      flash[:notice] = '必須項目を入力してください'
     end
   end
 
@@ -34,13 +34,13 @@ class RecruitmentsController < ApplicationController
       redirect_to root_path
     else
       render 'edit'
-      flash.now[:alert] = '編集に失敗しました'
+      flash[:notice] = '編集に失敗しました'
     end
   end
 
   def destroy
     @recruitment.destroy
-    flash.now[:alert] = '投稿を削除しました'
+    flash[:alert] = '投稿を削除しました'
     redirect_to recruitments_path
   end
 
