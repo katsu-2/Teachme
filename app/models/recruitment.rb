@@ -5,4 +5,6 @@ class Recruitment < ApplicationRecord
 
   validates :title, presence: true, length: {maximum: 30}
   validates :content, presence: true, length: {maximum: 1000}
+
+  scope :recent, -> { order('created_at desc') }
 end
