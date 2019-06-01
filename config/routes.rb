@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: "registrations" }
+
   get 'student/index'
   get 'teacher/index'
-  devise_for :users
   root 'recruitments#index'
 
   resources :users, only: %i(index show)
