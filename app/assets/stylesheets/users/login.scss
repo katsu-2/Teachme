@@ -1,0 +1,179 @@
+/////////////////////////
+/////////signup//////////
+/////////////////////////
+
+@import "common";
+
+
+.form-around {
+  .signup-form {
+    box-shadow: rgba(0,0,0,0.12) 0 1px 5px;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    margin: 40px auto;
+    background: white;
+    width: 500px;
+    padding: 40px 0;
+
+    @include sp {
+      width: 100%;
+    };
+    .form-title {
+      & h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 2rem;
+        margin: 40px 0;
+        color: pink;
+
+        @include sp {
+          font-size: 1.5rem;
+        }
+      }
+      & h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #4c4c4c;
+        margin: 40px;
+      }
+    }
+    p {
+      text-align: center;
+
+      .user-avatar {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+
+        @include sp {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+    .new-user-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .name-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-person-type {
+      display: flex;
+      .radio_button {
+        font-size: 1.2rem;
+        margin: 10px auto;
+        height: 2.6rem;
+        color: #757575;
+        .type-form {
+        }
+      }
+    }
+
+    .new-email {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .email-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-pass {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .pass-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .pass-conf {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .pass-form {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        border: 1px solid #cfcfcf;
+        border-radius: 7px;
+      }
+    }
+
+    .new-submit {
+      width: 70%;
+      margin: 30px auto;
+      height: 40px;
+      .submit-btn {
+        width: 100%;
+        background: #fd5068;
+        border-radius: 30px;
+        height: 40px;
+        color: white;
+        box-shadow: 2px 2px 12px 0px;
+      }
+    }
+
+    .new-prefecture {
+      display: flex;
+      @include edit;
+
+      .pre-btn {
+        background: #fd5068;
+        color: white;
+      }
+    }
+
+    .new-age {
+      display: flex;
+      @include edit;
+    }
+
+    .new-sex {
+      display: flex;
+
+      @include edit;
+
+      .l-sex {
+        margin: auto;
+
+        label {
+
+        }
+      }
+      .but-sex {
+        margin: auto;
+      }
+    }
+
+    .new-under {
+
+    }
+  }
+}
+
+
+.m-btn {
+  background: #FD4F68;
+  border: none;
+}

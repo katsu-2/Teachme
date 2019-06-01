@@ -33,14 +33,32 @@
       </div>
     </div>
 
-    <div class="new-prefecture">
+<!--     <div class="new-prefecture">
       <%= f.label :都道府県 %><br />
       <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn btn-info"%>
+    </div> -->
+
+    <div class="new-prefecture">
+      <div class="pref-title user-title">
+        <h2>都道府県</h2>
+      </div>
+      <div class="select-pref">
+        <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn btn-info"%>
+      </div>
     </div>
 
-    <div class="new-age">
+    <!-- <div class="new-age">
       <%= f.label :年齢, class: "age" %>
       <%= f.text_field :age, class: "age-form" %>
+    </div> -->
+
+    <div class="new-age">
+      <div class="age-title user-title">
+        <h2>年齢</h2>
+      </div>
+      <div class="your-age">
+        <%= f.text_field :age, class: "age-form" %>
+      </div>
     </div>
 
     <div class="new-sex">
@@ -55,16 +73,19 @@
       </div>
     </div>
 
-    <div class="new-self-introduction">
+    <!-- <div class="new-self-introduction">
       <%= f.label :自己紹介, class: "self-intro" %>
       <%= f.text_area :self_introduction, class: "self-i-form", rows: 6 %>
-    </div>
+    </div> -->
 
-    <div class="form-group">
-        <%= f.label '更新するにはパスワードを入力してください' %>
-        <%= f.password_field :current_password, class: "form-control", autocomplete: "off" %>
+    <div class="new-self-introduction">
+      <div class="intro-title user-title">
+        <h2>自己紹介</h2>
+      </div>
+      <div class="your-intro">
+        <%= f.text_area :self_introduction, class: "self-i-form", rows: 6 %>
+      </div>
     </div>
-
 
 
 
