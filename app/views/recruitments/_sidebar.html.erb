@@ -1,28 +1,45 @@
 <div class="sidebar">
   <div class="s-prof side-each">
-    <p>
-      <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
-    </p>
-    <h2>プロフィール</h2>
+    <div class="side-around">
+      <p>
+        <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
+      </p>
+      <h2>マイページ</h2>
+    </div>
+  </div>
+
+  <div class="s-message side-each">
+    <div class="side-around">
+      <p><%= icon("fas", "envelope", class: "s-icon")%></p>
+      <h2>メッセージ</h2>
+    </div>
   </div>
 
   <div class="s-form side-each">
-    <p><%= icon("fas", "pen-square", class: "s-icon")%></p>
-    <h2>投稿する</h2>
+    <div class="side-around">
+      <p><%= icon("fas", "pen-square", class: "s-icon")%></p>
+      <h2>投稿する</h2>
+    </div>
   </div>
 
   <div class="s-recruitment side-each">
-    <p><%= icon("fas", "mail-bulk", class: "s-icon")%></p>
-    <h2>全投稿</h2>
+    <div class="side-around">
+      <p><%= icon("fas", "mail-bulk", class: "s-icon")%></p>
+      <h2>全投稿</h2>
+    </div>
   </div>
 
   <div class="s-teacher side-each">
-    <p><%= icon("fas", "user-tie", class: "s-icon")%></p>
-    <h2>指導者</h2>
+    <div class="side-around">
+      <p><%= icon("fas", "user-tie", class: "s-icon")%></p>
+      <h2>指導者</h2>
+    </div>
   </div>
 
   <div class="s-student side-each">
-    <p><%= icon("fas", "user-graduate", class: "s-icon")%></p>
-    <h2>受講者</h2>
+    <div class="side-around">
+      <p><%= icon("fas", "user-graduate", class: "s-icon")%></p>
+      <h2>受講者</h2>
+    </div>
   </div>
 </div>

@@ -1,3 +1,9 @@
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .main {
     display: flex;
 
@@ -7,28 +13,26 @@
       background: white;
 
       .sidebar {
-        .s-prof {
-          display: flex;
-
-          p {
-            .user-pic {
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-            }
-          }
-          h2 {
-            text-align: center;
-          }
-        }
         .side-each {
           height: 80px;
           border-bottom: 1px solid #cfcfcf;
 
-          h2 {
-            font-size: 1.5rem;
-            text-align: center;
+          .side-around {
+            display: flex;
+            padding: 25px 45px;
 
+            p {
+
+              .s-icon {
+                font-size: 35px;
+              }
+            }
+
+            h2 {
+              font-size: 1.7rem;
+              text-align: center;
+              margin-left: 10px;
+            }
           }
         }
       }
