@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+
+    .side {
+      width: 25%;
+      border-right: 1px solid #cfcfcf;
+      background: white;
+
+      .sidebar {
+        .side-each {
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
