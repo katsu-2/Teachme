@@ -13,7 +13,7 @@
     margin: 40px auto;
     background: white;
     width: 500px;
-    padding: 40px 0;
+    padding: 40px;
 
     @include sp {
       width: 100%;
@@ -23,7 +23,7 @@
         text-align: center;
         font-weight: 600;
         font-size: 2rem;
-        margin: 40px 0;
+        margin: 40px;
         color: pink;
 
         @include sp {
@@ -57,7 +57,7 @@
       flex-direction: column;
       justify-content: center;
       .name-form {
-        width: 80%;
+        width: 100%;
         height: 50px;
         font-size: 1.2rem;
         margin: 20px auto;
@@ -69,10 +69,7 @@
     .new-person-type {
       display: flex;
       .radio_button {
-        font-size: 1.2rem;
-        margin: 10px auto;
-        height: 2.6rem;
-        color: #757575;
+        @include sex;
         .type-form {
         }
       }
@@ -83,7 +80,7 @@
       flex-direction: column;
       justify-content: center;
       .email-form {
-        width: 80%;
+        width: 100%;
         height: 50px;
         font-size: 1.2rem;
         margin: 20px auto;
@@ -134,37 +131,24 @@
       }
     }
 
-    .new-prefecture {
-      display: flex;
-      @include edit;
 
-      .pre-btn {
-        background: #fd5068;
-        color: white;
-      }
-    }
 
-    .new-age {
-      display: flex;
-      @include edit;
-    }
+    // .new-sex {
+    //   display: flex;
 
-    .new-sex {
-      display: flex;
+    //   @include edit;
 
-      @include edit;
+    //   .l-sex {
+    //     margin: auto;
 
-      .l-sex {
-        margin: auto;
+    //     label {
 
-        label {
-
-        }
-      }
-      .but-sex {
-        margin: auto;
-      }
-    }
+    //     }
+    //   }
+    //   .but-sex {
+    //     margin: auto;
+    //   }
+    // }
 
     .new-under {
 
