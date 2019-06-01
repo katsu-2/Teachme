@@ -33,24 +33,31 @@
       </div>
     </div>
 
-<!--     <div class="new-prefecture">
-      <%= f.label :都道府県 %><br />
-      <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn btn-info"%>
-    </div> -->
+    <div class="new-sex">
+      <div class="l-sex user-title">
+        <h2>性別</h2>
+      </div>
+      <div class="but-sex">
+        <div class="sex-man">
+          <%= f.label '男性' %>
+          <%= f.radio_button :sex, :男性 %>
+        </div>
+
+        <div class="sex-women">
+          <%= f.label '女性' %>
+          <%= f.radio_button :sex, :女性 %>
+        </div>
+      </div>
+    </div>
 
     <div class="new-prefecture">
       <div class="pref-title user-title">
         <h2>都道府県</h2>
       </div>
       <div class="select-pref">
-        <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn btn-info"%>
+        <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn pref-btn"%>
       </div>
     </div>
-
-    <!-- <div class="new-age">
-      <%= f.label :年齢, class: "age" %>
-      <%= f.text_field :age, class: "age-form" %>
-    </div> -->
 
     <div class="new-age">
       <div class="age-title user-title">
@@ -61,22 +68,6 @@
       </div>
     </div>
 
-    <div class="new-sex">
-      <div class="l-sex">
-        <%= f.label :性別, class: "sex" %>
-      </div>
-      <div class="but-sex">
-        <%= f.label '男性' %>
-      <%= f.radio_button :sex, :男性 %>
-      <%= f.label '女性' %>
-      <%= f.radio_button :sex, :女性 %>
-      </div>
-    </div>
-
-    <!-- <div class="new-self-introduction">
-      <%= f.label :自己紹介, class: "self-intro" %>
-      <%= f.text_area :self_introduction, class: "self-i-form", rows: 6 %>
-    </div> -->
 
     <div class="new-self-introduction">
       <div class="intro-title user-title">

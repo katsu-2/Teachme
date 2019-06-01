@@ -94,6 +94,14 @@ $sp: 767px;
   }
 }
 
+@mixin sex {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #757575;
+  margin-right: 10px;
+  margin: auto;
+}
+
 .secret {
 
   @include sp {

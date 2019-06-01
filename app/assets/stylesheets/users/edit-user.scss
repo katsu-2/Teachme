@@ -1,0 +1,55 @@
+.user-title {
+  margin-top: 35px;
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+.new-prefecture {
+  .pref-title {
+
+  }
+  .select-pref {
+    .pref-btn {
+      width: 100%;
+      border: 1px solid #cfcfcf;
+      border-radius: 7px;
+      height: 40px;
+    }
+  }
+}
+
+
+.your-age {
+  .age-form {
+    width: 100%;
+      border: 1px solid #cfcfcf;
+      border-radius: 7px;
+      height: 40px;
+  }
+}
+
+
+.new-sex {
+  .but-sex {
+    display: flex;
+    .sex-man {
+      @include sex;
+    }
+
+    .sex-women {
+      @include sex;
+    }
+  }
+}
+
+.new-self-introduction {
+  .your-intro {
+    .self-i-form {
+      width: 100%;
+      border: 1px solid #cfcfcf;
+      border-radius: 7px;
+    }
+  }
+}
