@@ -1,9 +1,5 @@
 
 @import 'bootstrap';
-@import 'static_pages';
-@import 'recruitments';
-@import 'users';
-@import 'student';
 @import 'groups';
 @import 'messages';
 @import 'common';
@@ -12,6 +8,10 @@
 @import 'users/show';
 @import 'users/login';
 @import 'users/edit-user';
+
+@import 'recruitments/index';
+@import 'recruitments/show';
+@import 'recruitments/form';
 
 
 h3 {

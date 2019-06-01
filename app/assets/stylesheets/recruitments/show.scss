@@ -1,0 +1,72 @@
+@import "common";
+
+
+.each-p {
+  @include border;
+  width: 600px;
+  margin: 30px auto;
+
+  @include sp {
+    width: 98%;
+    height: 100%;
+  };
+
+  .p-upper {
+    display: flex;
+    border-bottom: 3px dotted #cfcfcf;
+    padding-bottom: 15px;
+
+
+    .p-user {
+      p {
+        @include position;
+
+        .user-pic {
+          @include avatar;
+        }
+      }
+
+      .user-name {
+        p {
+          margin: 20px 0;
+        }
+      }
+
+      .user-pref {
+        p {
+          @include prefecture;
+        }
+      }
+    }
+
+    .p-title {
+      h2 {
+        @include title;
+      }
+    }
+  }
+
+  .p-content {
+    margin: 50px 0 0 0;
+    border-bottom: 3px dotted #cfcfcf;
+    padding: 0 15px 20px;
+
+
+    & p {
+      color: #6c757d;
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+
+      @include sp {
+        font-size: 1.1rem;
+        line-height: 2.0rem;
+      }
+    }
+  }
+
+  .p-tag {
+    span {
+      margin-right: 10px;
+    }
+  }
+}
