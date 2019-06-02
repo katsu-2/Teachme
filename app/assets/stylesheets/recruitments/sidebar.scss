@@ -17,26 +17,27 @@
           height: 80px;
           border-bottom: 1px solid #cfcfcf;
 
+          a {
+            text-decoration: none;
+            color: black;
 
-          .side-around {
-            display: flex;
-            padding: 25px 45px;
+            .side-around {
+              display: flex;
+              padding: 25px 45px;
 
-            p {
+              p {
 
-              .s-icon {
-                font-size: 35px;
+                .s-icon {
+                  font-size: 35px;
+                }
               }
-            }
 
-            h2 {
-              font-size: 1.7rem;
-              text-align: center;
-              margin-left: 10px;
+              h2 {
+                font-size: 1.7rem;
+                text-align: center;
+                margin-left: 10px;
 
-              a {
-                text-decoration: none;
-                color: black;
+
               }
             }
           }
