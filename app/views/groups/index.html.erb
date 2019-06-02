@@ -12,15 +12,11 @@
           </p>
         </div>
         <%= link_to group_messages_path(user.group) do %>
-        <div class="your-content">
-          <div class="your-name">
-            <h2><%= user.user.name %></h2>
+          <div class="your-content">
+            <div class="your-name">
+              <h2><%= user.user.name %></h2>
+            </div>
           </div>
-          <div class="your-message">
-            <!-- 30字以内-->
-            <h2></h2>
-          </div>
-        </div>
         <% end %>
       </div>
       <% end %>

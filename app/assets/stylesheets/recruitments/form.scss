@@ -3,7 +3,12 @@
 
 
 .recruitment-wrap {
-  width: 70%;
+  @include pc {
+    width: 70%;
+    margin: auto;
+  }
+
+  width: 95%;
   margin: auto;
 
   .recruitment-around {

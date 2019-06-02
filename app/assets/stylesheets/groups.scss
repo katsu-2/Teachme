@@ -8,11 +8,15 @@
 /////////////////////////
 .main {
   .group-wrap {
-    width: 70%;
-    margin: auto;
+    @include pc {
+      width: 70%;
+      margin: auto;
+    }
+
+    width: 100%;
 
   .group-around {
-      width: 70%;
+      width: 90%;
       margin: 0 auto;
       border: 1px solid #cfcfcf;
       margin-top: 50px;
@@ -27,14 +31,14 @@
         width: 20%;
         & p {
           .user-pic {
-            width: 70px;
-            height: 70px;
+            width: 80%;
+            height: 80%;
             border-radius: 60%;
           }
         }
       }
       .your-content {
-        width: 80%;
+        width: 100%;
         .your-name {
           & h2 {
             font-weight: bold;

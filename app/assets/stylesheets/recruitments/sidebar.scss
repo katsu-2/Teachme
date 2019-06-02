@@ -11,12 +11,20 @@
 }
 
 .main {
-    display: flex;
+
+
+    @include pc {
+      display: flex;
+    }
 
     .side {
       width: 25%;
       border-right: 1px solid #cfcfcf;
       background: white;
+
+      @include sp {
+        display: none;
+      }
 
       .sidebar {
         .side-each {
