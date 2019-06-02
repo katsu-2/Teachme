@@ -1,14 +1,12 @@
 <div class="sidebar">
   <div class="s-title side-each">
-    <%= link_to '#' do %>
-      <div class="side-around">
-        <h2 class="brand-title">Teachme</h2>
-      </div>
-    <% end %>
+    <div class="side-around">
+      <h2 class="brand-title"><%= link_to 'Teachme', root_path, class: "top-title"%></h2>
+    </div>
   </div>
 
   <div class="s-prof side-each">
-    <%= link_to '#' do %>
+    <%= link_to user_path(current_user) do %>
       <div class="side-around">
         <p>
           <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
@@ -19,7 +17,7 @@
   </div>
 
   <div class="s-message side-each">
-    <%= link_to '#' do %>
+    <%= link_to groups_path do %>
       <div class="side-around">
         <p><%= icon("fas", "envelope", class: "s-icon")%></p>
         <h2>メッセージ</h2>
@@ -37,7 +35,7 @@
   </div>
 
   <div class="s-recruitment side-each">
-    <%= link_to '#' do %>
+    <%= link_to recruitments_path do %>
       <div class="side-around">
         <p><%= icon("fas", "mail-bulk", class: "s-icon")%></p>
         <h2>全投稿</h2>
@@ -46,7 +44,7 @@
   </div>
 
   <div class="s-teacher side-each">
-    <%= link_to '#' do %>
+    <%= link_to teacher_index_path, id: "teacher" do %>
       <div class="side-around">
         <p><%= icon("fas", "user-tie", class: "s-icon")%></p>
         <h2>指導者</h2>
@@ -55,7 +53,7 @@
   </div>
 
   <div class="s-student side-each">
-    <%= link_to '#' do %>
+    <%= link_to student_index_path, id: "student" do %>
       <div class="side-around">
         <p><%= icon("fas", "user-graduate", class: "s-icon")%></p>
         <h2>受講者</h2>
