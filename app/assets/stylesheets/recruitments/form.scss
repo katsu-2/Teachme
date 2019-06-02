@@ -3,6 +3,8 @@
 
 
 .recruitment-wrap {
+  width: 70%;
+  margin: auto;
 
   .recruitment-around {
     padding: 20px 0 70px;
@@ -118,6 +120,7 @@
 
         .r-submit {
           display: flex;
+          margin-top: 20px;
 
           .submit-btn {
             border:1px solid $orange;

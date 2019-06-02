@@ -2,7 +2,9 @@
 
   <%= render 'recruitments/upper' %>
   <section class="main">
-    <h3>受講者投稿一覧</h3>
+    <div class="side">
+      <%= render 'recruitments/sidebar' %>
+    </div>
     <div class="main-p">
       <%= render partial: 'main', locals: { students: @students, recruitments: @recruitments } %>
     </div>
