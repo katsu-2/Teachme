@@ -27,12 +27,16 @@
       border-bottom: 1px solid $gray;
       padding: 10px;
       display: flex;
+
+      @include sp {
+        background: white;
+      }
       .your-img {
         width: 20%;
         & p {
           .user-pic {
-            width: 80%;
-            height: 80%;
+            width: 50%;
+            height: 50%;
             border-radius: 60%;
           }
         }
