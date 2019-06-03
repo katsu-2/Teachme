@@ -26,12 +26,12 @@ $sp: 767px;
 }
 
 @mixin prefecture {
-  border: 1px solid pink;
+  border: 1px solid $basicGreen;
   border-radius: 20px;
   text-align: center;
   padding: 2px 3px;
   font-size: 13px;
-  color: pink;
+  color: $basicGreen;
 }
 
 
@@ -43,8 +43,8 @@ $sp: 767px;
 
 
 @mixin p {
-  border: 1px solid $orange;
-  background: $orange;
+  border: 1px solid $pink;
+  background: $pink;
   border-radius: 10px;
   align-items: center;
   padding: 3px 5px;
@@ -125,6 +125,11 @@ $sp: 767px;
 }
 
 
-$basicGreen: #9CD75B;
 $orange: #ff6666;
-$tcolor: #fd5068;
+$pink: #fd5068;
+
+$black: #535353;
+$contentGray: #6c757d;
+$navy: #2b546a;
+$basicGreen: #9CD75B;
+$gray: #cfcfcf;

@@ -6,7 +6,7 @@
 
 .brand-title {
   .top-title {
-    color: pink !important;
+    color: $basicGreen !important;
   }
 }
 
@@ -33,7 +33,7 @@
 
           a {
             text-decoration: none;
-            color: black;
+            color: $black;
 
             .side-around {
               display: flex;
@@ -59,7 +59,7 @@
 
         .side-each:hover {
           box-shadow: 3px 5px 20px -5px gray;
-          border-right: 5px solid pink;
+          border-right: 5px solid $basicGreen;
         }
       }
     }

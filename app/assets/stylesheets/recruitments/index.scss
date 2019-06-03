@@ -46,7 +46,7 @@
           padding: 0 10px;
           align-items: center;
           height: 42px;
-          color: #2b546a;
+          color: $navy;
           font-weight: bold;
           cursor: pointer;
           margin: auto;
@@ -128,16 +128,12 @@
         .p-content {
           margin-top: 20px;
 
-          // @include sp {
-          //   display: none;
-          // }
-
           .link {
             text-decoration: none
           }
 
           p {
-            color: #6c757d;
+            color: $contentGray;
             word-break: break-all;
           }
         }
