@@ -5,13 +5,17 @@
 /////////////////////////
 
 .user-wrapper {
+  width: 75%;
+  margin: auto;
+
+  @include sp {
+    width: 100%;
+  }
+
   .user {
-    @include pc {
-      display: flex;
-    };
 
     .user-show {
-      width: 40%;
+      width: 100%;
 
       @include sp {
         width: 100%;
@@ -66,7 +70,10 @@
 
         @include sp {
           width: 100%;
+        }
 
+        #my-int {
+          display: none;
         }
       }
 
@@ -104,11 +111,9 @@
     }
 
     .user-recruit {
-      width: 60%;
+      width: 100%;
 
-      @include sp {
-        width: 100%;
-      };
+
 
       .p-upper {
         a {
