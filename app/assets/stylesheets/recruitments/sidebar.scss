@@ -19,7 +19,7 @@
 
     .side {
       width: 25%;
-      border-right: 1px solid #cfcfcf;
+      border-right: 1px solid $gray;
       background: white;
 
       @include sp {
@@ -29,7 +29,7 @@
       .sidebar {
         .side-each {
           height: 80px;
-          border-bottom: 1px solid #cfcfcf;
+          border-bottom: 1px solid $gray;
 
           a {
             text-decoration: none;

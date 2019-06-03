@@ -46,7 +46,7 @@
           padding: 0 10px;
           align-items: center;
           height: 42px;
-          color: $navy;
+          color: $black;
           font-weight: bold;
           cursor: pointer;
           margin: auto;
@@ -88,28 +88,31 @@
           display: flex;
 
           .p-user {
-            p {
-              @include position;
-
-              .user-pic {
-                width: 50px;
-                height: 50px;
-                border-radius: 60%;
-              }
-            }
-
-            .user-name {
+            a {
+              color: $black;
               p {
-                margin-top: 5px;
-                margin-bottom: 10px;
-                font-size: 0.7rem;
-                font-weight: bold;
-              }
-            }
+                @include position;
 
-            .user-pref {
-              p {
-                @include prefecture;
+                .user-pic {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 60%;
+                }
+              }
+
+              .user-name {
+                p {
+                  margin-top: 5px;
+                  margin-bottom: 10px;
+                  font-size: 0.7rem;
+                  font-weight: bold;
+                }
+              }
+
+              .user-pref {
+                p {
+                  @include prefecture;
+                }
               }
             }
           }
