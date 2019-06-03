@@ -14,7 +14,7 @@ $sp: 767px;
 }
 
 @mixin border {
-  border: 2px solid #cfcfcf;
+  border: 2px solid $gray;
   border-radius: 20px;
   padding: 13px;
   background: #fff;
@@ -53,7 +53,7 @@ $sp: 767px;
 }
 
 @mixin user-index {
-  border: 2px solid #cfcfcf;
+  border: 2px solid $gray;
   border-radius: 20px;
   padding: 13px;
   background: #fff;
@@ -62,7 +62,7 @@ $sp: 767px;
 }
 
 @mixin borderSimple {
-  border: 1px solid #cfcfcf;
+  border: 1px solid $gray;
 }
 
 @mixin avatar {
@@ -127,7 +127,6 @@ $sp: 767px;
 
 $orange: #ff6666;
 $pink: #fd5068;
-
 $black: #535353;
 $contentGray: #6c757d;
 $navy: #2b546a;

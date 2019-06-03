@@ -25,7 +25,7 @@ h3 {
   background: #F8F9FA;
 
   @include sp {
-    background: #ff666617;
+    background: linear-gradient(to left, #77bb58e0, #b9e682d1);
   };
 }
 
@@ -35,7 +35,7 @@ h3 {
 /////////////////////////
 
   .header {
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid $gray;
 
     @include pc {
       display: none;
@@ -46,7 +46,7 @@ h3 {
           font-size: 1.4rem;
           font-weight: bold;
           margin-left: 100px;
-          color: pink;
+          color: $basicGreen;
           text-decoration: none;
         }
       }
@@ -55,13 +55,13 @@ h3 {
           margin-right: 70px;
           .nav-p {
             .nav-link {
-              color: pink;
+              color: $basicGreen;
               font-size: 1.1rem;
             }
           }
           .nav-d {
             & a {
-              color: pink;
+              color: $basicGreen;
               font-size: 1.1rem;
             }
             .nav-m {
@@ -87,13 +87,13 @@ h3 {
 
 
 footer {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid $gray;
   height: 60px;
   .text-center {
     ul {
       li {
         a {
-          color: pink;
+          color: $basicGreen;
         }
       }
     }
