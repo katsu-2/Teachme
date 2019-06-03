@@ -25,9 +25,25 @@
       .user-icon {
         & p {
           text-align: center;
+          position: relative;
 
           .user-pic {
             @include avatar
+          }
+
+          .setting {
+            position: absolute;
+            top: 30%;
+            right: 30%;
+
+            a {
+              color: $black;
+              text-decoration: none;
+
+              i {
+                font-size: 1.4rem;
+              }
+            }
           }
         }
         .user-name-type {

@@ -11,6 +11,11 @@
         <div class="user-icon">
           <p>
             <%= render partial: "shared/img", locals: { user: @user } %>
+            <span class="setting">
+              <%= link_to edit_user_registration_path(id: current_user.id) do %>
+                <%= icon("fas", "cog", class: "s-icon")%>
+              <% end %>
+            </span>
           </p>
           <div class="user-name-type">
             <h2 class="user-name">
