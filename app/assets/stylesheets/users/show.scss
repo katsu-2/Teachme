@@ -33,6 +33,7 @@
             .user-name {
               margin: 0 auto;
               font-size: 1.3rem;
+              color: $black;
 
               @include sp {
                 font-size: 1.2rem;
@@ -108,6 +109,19 @@
       @include sp {
         width: 100%;
       };
+
+      .p-upper {
+        a {
+          text-decoration: none;
+          color: black;
+
+          .user-name {
+            p {
+              color: $black;
+            }
+          }
+        }
+      }
     }
   }
 }

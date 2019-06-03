@@ -115,10 +115,12 @@ $sp: 767px;
     };
   }
   span {
+    color: $black;
+
     @include sp {
       position: absolute;
       left: 30%;
-      color: #2b546a;
+      color: $black;
       font-size: 1rem;
     };
   }
