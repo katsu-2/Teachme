@@ -4,11 +4,19 @@
   border-radius: 50%;
 }
 
-.brand-title {
-  .top-title {
-    color: $basicGreen !important;
+.s-title {
+  position: relative;
+  .brand-title {
+    .top-title {
+      color: $basicGreen !important;
+      font-size: 130%;
+      position: absolute;
+      left: 12%;
+      top: 10%;
+    }
   }
 }
+
 
 .main {
 
