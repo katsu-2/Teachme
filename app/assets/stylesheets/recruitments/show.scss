@@ -47,15 +47,15 @@
   }
 
   .p-content {
-    margin: 50px 0 0 0;
+    margin: 20px 0 0 0;
     border-bottom: 3px dotted $gray;
-    padding: 0 15px 20px;
+    padding: 0 15px 10px;
 
 
     & p {
       color: $contentGray;
-      font-size: 1.3rem;
-      line-height: 2.5rem;
+      font-size: 1rem;
+      line-height: 1.8rem;
 
       @include sp {
         font-size: 1.1rem;
