@@ -8,5 +8,7 @@
 
   <div class="main-p">
     <%= render partial: 'shared/recruitment', locals: { recruitments: @recruitments } %>
+    <%= paginate(@recruitments) %>
   </div>
 </section>
+
