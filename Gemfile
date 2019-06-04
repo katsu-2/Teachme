@@ -16,6 +16,7 @@ gem 'pry-rails', '~> 0.3.9'
 gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
