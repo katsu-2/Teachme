@@ -4,6 +4,7 @@ class RecruitmentsController < ApplicationController
 
   def index
     @recruitments = Recruitment.recent.includes(:user)
+    # binding.pry
   end
 
   def show

@@ -1,29 +1,32 @@
-<div class="each-p">
-  <div class="p-upper">
-    <div class="p-user">
-      <%= link_to user_path(user) do %>
-      <p>
-        <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
-      </p>
-      <div class="user-name">
-        <p><%= user.name %></p>
+<% recruitments.each do |recruitment| %>
+
+  <div class="each-p">
+    <div class="p-upper">
+      <div class="p-user">
+        <%= link_to user_path(recruitment.user) do %>
+        <p>
+          <%= image_tag("user.png", :alt => "募集者の画像", :class => "user-pic") %>
+        </p>
+        <div class="user-name">
+          <p><%= recruitment.user.name %></p>
+        </div>
+        <div class="user-pref">
+          <p><%= recruitment.user.prefecture %></p>
+        </div>
+        <% end %>
       </div>
-      <div class="user-pref">
-        <p><%= user.prefecture %></p>
+      <%= link_to recruitment_path(recruitment), class: "link" do %>
+      <div class="p-title">
+        <h2><%= truncate(recruitment.title, length: 20) %></h2>
       </div>
       <% end %>
     </div>
-    <%= link_to recruitment_path(recruitment), class: "link" do %>
-    <div class="p-title">
-      <h2><%= truncate(recruitment.title, length: 20) %></h2>
+    <div class="p-content">
+      <%= link_to recruitment_path(recruitment), class: "link" do %>
+      <p class="p-i">
+        <%= truncate(recruitment.content, length: 50) %>
+      </p>
+      <% end %>
     </div>
-    <% end %>
   </div>
-  <div class="p-content">
-    <%= link_to recruitment_path(recruitment), class: "link" do %>
-    <p class="p-i">
-      <%= truncate(recruitment.content, length: 50) %>
-    </p>
-    <% end %>
-  </div>
-</div>
+<% end %>
