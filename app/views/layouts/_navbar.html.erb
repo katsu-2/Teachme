@@ -1,55 +1,41 @@
-<!-- <nav class="header sticky-top">
-  <div class="navbar">
-    <div class="nav-brand">
-      <%= link_to 'Teachme', root_path, class: "brand-title" %>
-    </div>
-    <div class="navbar-button">
-      <% if user_signed_in? %>
-      <ul class="navbar-right">
-
-        <li class="nav-item list-inline-item nav-p">
-            <%= link_to '投稿', new_recruitment_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item dropdown list-inline-item nav-d">
-          <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.name %>
-          </a>
-          <div class="dropdown-menu nav-m" aria-labelledby="navbarDropdown">
-            <%= link_to 'マイページ', user_path(id: current_user.id), class: "dropdown-item nav-i" %>
-
-            <%= link_to "プロフィール編集",  edit_user_registration_path(id: current_user.id), class: "dropdown-item nav-i" %>
-
-            <%= link_to "ユーザー一覧", users_path, class: "dropdown-item nav-i" %>
-
-            <div class="dropdown-divider"></div>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "本当にいいですか？"},class: " dropdown-item nav-i" %>
-          </div>
-        </li>
-      <% else %>
-
-          <li class=" list-inline-item nav-l">
-            <%= link_to '新規登録', new_user_registration_path, class: "nav-link nav-a nav-signup" %>
-          </li>
-
-          <li class="list-inline-item nav-l">
-            <%= link_to 'ログイン', new_user_session_path, class: "nav-link nav-a nav-login", id: "login-show" %>
-          </li>
-      </ul>
-      <% end %>
-    </div>
-  </div>
-</nav>
- -->
 
 <header class="header">
   <nav class="global-nav">
     <ul class="global-nav__list">
-      <li class="global-nav__item"><a href="">メニュー1</a></li>
-      <li class="global-nav__item"><a href="">メニュー2</a></li>
-      <li class="global-nav__item"><a href="">メニュー3</a></li>
-      <li class="global-nav__item"><a href="">メニュー4</a></li>
-      <li class="global-nav__item"><a href="">メニュー5</a></li>
+      <% if user_signed_in? %>
+
+        <li class="global-nav__item">
+          <%= link_to 'マイページ', user_path(current_user) %>
+        </li>
+
+        <li class="global-nav__item">
+          <%= link_to 'メッセージ', groups_path %>
+        </li>
+
+        <li class="global-nav__item">
+          <%= link_to '投稿する', new_recruitment_path %>
+        </li>
+
+        <li class="global-nav__item">
+          <%= link_to 'ユーザー一覧', new_user_session_path %>
+        </li>
+
+        <li class="global-nav__item nav-logout">
+          <%= link_to 'ログアウト', destroy_user_session_path, class: "log", method: :delete, data: {confirm: "本当にいいですか？"} %>
+        </li>
+
+      <% else %>
+
+        <li class="global-nav__item nav-logout">
+          <%= link_to '新規登録', new_user_registration_path, class: "log" %>
+        </li>
+
+        <li class="global-nav__item">
+          <%= link_to 'ログイン', new_user_session_path, class: "nav-login" %>
+        </li>
+
+      <% end %>
+
     </ul>
   </nav>
   <div class="hamburger" id="js-hamburger">
