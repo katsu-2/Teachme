@@ -5,6 +5,7 @@
     </div>
   </div>
 
+<% if user_signed_in? %>
   <div class="s-prof side-each">
     <%= link_to user_path(current_user) do %>
       <div class="side-around">
@@ -33,6 +34,28 @@
       </div>
     <% end %>
   </div>
+
+<% else %>
+
+  <div class="s-signup side-each">
+    <%= link_to new_user_registration_path do %>
+      <div class="side-around side-signup">
+        <p><%= icon("fas", "user-plus", class: "s-icon")%></p>
+        <h2>新規登録</h2>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="s-login side-each">
+    <%= link_to new_user_session_path do %>
+      <div class="side-around side-login">
+        <p><%= icon("fas", "key", class: "s-icon")%></p>
+        <h2>ログイン</h2>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>
 
   <div class="s-recruitment side-each">
     <%= link_to recruitments_path do %>

@@ -11,8 +11,8 @@
       color: $basicGreen !important;
       font-size: 130%;
       position: absolute;
-      left: 12%;
-      top: 10%;
+      left: 16%;
+      top: 15%;
     }
   }
 }
@@ -61,6 +61,14 @@
 
 
               }
+            }
+
+            .side-login {
+              color: #9cd75b70;
+            }
+
+            .side-signup {
+              color: $pink;
             }
           }
         }
