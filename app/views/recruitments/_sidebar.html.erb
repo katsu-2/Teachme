@@ -5,8 +5,35 @@
     </div>
   </div>
 
+  <div class="s-recruitment side-each s-hover">
+    <%= link_to recruitments_path do %>
+      <div class="side-around">
+        <p><%= icon("fas", "mail-bulk", class: "s-icon")%></p>
+        <h2>全投稿</h2>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="s-teacher side-each s-hover">
+    <%= link_to teacher_index_path, id: "teacher" do %>
+      <div class="side-around">
+        <p><%= icon("fas", "user-tie", class: "s-icon")%></p>
+        <h2>指導者</h2>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="s-student side-each s-hover">
+    <%= link_to student_index_path, id: "student" do %>
+      <div class="side-around">
+        <p><%= icon("fas", "user-graduate", class: "s-icon")%></p>
+        <h2>受講者</h2>
+      </div>
+    <% end %>
+  </div>
+
 <% if user_signed_in? %>
-  <div class="s-prof side-each">
+  <div class="s-prof side-each s-hover">
     <%= link_to user_path(current_user) do %>
       <div class="side-around">
         <p>
@@ -17,7 +44,7 @@
     <% end %>
   </div>
 
-  <div class="s-message side-each">
+  <div class="s-message side-each s-hover">
     <%= link_to groups_path do %>
       <div class="side-around">
         <p><%= icon("fas", "envelope", class: "s-icon")%></p>
@@ -26,7 +53,7 @@
     <% end %>
   </div>
 
-  <div class="s-form side-each">
+  <div class="s-form side-each s-hover">
     <%= link_to new_recruitment_path do %>
       <div class="side-around">
         <p><%= icon("fas", "pen-square", class: "s-icon")%></p>
@@ -35,16 +62,16 @@
     <% end %>
   </div>
 
-<% else %>
-
-  <div class="s-signup side-each">
-    <%= link_to new_user_registration_path do %>
-      <div class="side-around side-signup">
-        <p><%= icon("fas", "user-plus", class: "s-icon")%></p>
-        <h2>新規登録</h2>
+  <div class="s-logout side-each">
+    <%= link_to destroy_user_session_path, class: "log", method: :delete, data: {confirm: "本当にいいですか？"} do %>
+      <div class="side-around side-log">
+        <p><%= icon("fas", "sign-out-alt", class: "s-icon")%></p>
+        <h2>ログアウト</h2>
       </div>
     <% end %>
   </div>
+
+<% else %>
 
   <div class="s-login side-each">
     <%= link_to new_user_session_path do %>
@@ -55,32 +82,15 @@
     <% end %>
   </div>
 
+  <div class="s-logout side-each">
+    <%= link_to new_user_registration_path do %>
+      <div class="side-around side-log">
+        <p><%= icon("fas", "user-plus", class: "s-icon")%></p>
+        <h2>新規登録</h2>
+      </div>
+    <% end %>
+  </div>
+
 <% end %>
 
-  <div class="s-recruitment side-each">
-    <%= link_to recruitments_path do %>
-      <div class="side-around">
-        <p><%= icon("fas", "mail-bulk", class: "s-icon")%></p>
-        <h2>全投稿</h2>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="s-teacher side-each">
-    <%= link_to teacher_index_path, id: "teacher" do %>
-      <div class="side-around">
-        <p><%= icon("fas", "user-tie", class: "s-icon")%></p>
-        <h2>指導者</h2>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="s-student side-each">
-    <%= link_to student_index_path, id: "student" do %>
-      <div class="side-around">
-        <p><%= icon("fas", "user-graduate", class: "s-icon")%></p>
-        <h2>受講者</h2>
-      </div>
-    <% end %>
-  </div>
 </div>
