@@ -5,8 +5,15 @@
 
 
 .message-wrap {
+  width: 70%;
+  margin: auto;
+
+  @include sp {
+    width: 100%;
+  }
+
   .message-around {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -27,6 +34,7 @@
     .message-main {
       height: 550px;
       overflow: scroll;
+
       .content {
         padding: 10px 20px;
         .message-user {
@@ -35,33 +43,47 @@
           }
         }
         .message {
+
           & p {
             border: 1px solid #cfcfcf;
             border-radius: 5px;
             display: inline-block;
             padding: 5px;
+            word-break: break-all;
+          }
+
+          .m-green {
+            background: $basicGreen;
           }
         }
       }
     }
 
     .message-form {
-      @include borderSimple
-      height: 60px;
-      background: #F1F3F5;
+      border-top: 1px solid #cfcfcf;
+
       .form-message {
         height: 40px;
         width: 80%;
-        border-radius: 10px;
         margin: 10px;
+        border: none;
+
+        @include sp {
+          width: 70%;
+        }
       }
       .submit-btn {
-        background: $tcolor;
+        background: $pink;
         border: 1px;
         padding: 5px 15px;
         height: 47px;
         color: white;
         width: 10%;
+        border-radius: 15px;
+
+        @include sp {
+          width: 15%;
+        }
       }
     }
   }

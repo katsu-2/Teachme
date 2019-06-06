@@ -1,8 +1,10 @@
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import 'bootstrap';
 @import 'groups';
 @import 'messages';
 @import 'common';
+@import 'navbar';
 
 @import 'users/index';
 @import 'users/show';
@@ -12,6 +14,7 @@
 @import 'recruitments/index';
 @import 'recruitments/show';
 @import 'recruitments/form';
+@import 'recruitments/sidebar';
 
 
 h3 {
@@ -23,53 +26,80 @@ h3 {
   background: #F8F9FA;
 
   @include sp {
-    background: #ff666617;
+    background: linear-gradient(to left, #77bb58e0, #b9e682d1);
   };
 }
 
+.wrapper {
+  @include sp {
+    margin-top: 45px;
+  }
+}
 
 /////////////////////////
 /////////navbar//////////
 /////////////////////////
 
+  .header {
+    border-bottom: 1px solid $gray;
 
-.header {
-  border-bottom: 1px solid #cfcfcf;
-  .navbar {
-    .nav-brand {
-      .brand-title {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-left: 100px;
-        color: pink;
-        text-decoration: none;
-      }
+    @include pc {
+      display: none;
     }
-    .navbar-button {
-      .navbar-right {
-        margin-right: 70px;
-        .nav-p {
-          .nav-link {
-            color: pink;
-            font-size: 1.1rem;
-          }
+    .navbar {
+      .nav-brand {
+        .brand-title {
+          font-size: 1.4rem;
+          font-weight: bold;
+          margin-left: 100px;
+          color: $basicGreen;
+          text-decoration: none;
         }
-        .nav-d {
-          & a {
-            color: pink;
-            font-size: 1.1rem;
+      }
+      .navbar-button {
+        .navbar-right {
+          margin-right: 70px;
+          .nav-p {
+            .nav-link {
+              color: $basicGreen;
+              font-size: 1.1rem;
+            }
+
+            .nav-signup {
+              background: $pink;
+              color: white;
+              border-radius: 5px;
+            }
+
+            .nav-login {
+
+            }
           }
-          .nav-m {
-            .nav-i {
-              color: #2B556A;
+          .nav-d {
+            & a {
+              color: $basicGreen;
+              font-size: 1.1rem;
+            }
+            .nav-m {
+              .nav-i {
+                color: $black;
+              }
             }
           }
         }
       }
     }
   }
+
+.nav-signup {
+  background: $pink;
+  color: white;
+  border-radius: 5px;
 }
 
+.nav-login {
+
+}
 
 /////////////////////////
 /////////navbar//////////
@@ -77,19 +107,18 @@ h3 {
 
 
 
-
-
-
 footer {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid $gray;
   height: 60px;
   .text-center {
     ul {
       li {
         a {
-          color: pink;
+          color: $basicGreen;
         }
       }
     }
   }
 }
+
+

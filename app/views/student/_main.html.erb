@@ -20,15 +20,9 @@
       <div class="p-content">
         <%= link_to recruitment_path(recruitment), class: "link" do %>
         <p>
-          <%= truncate(recruitment.content, length: 35) %>
+          <%= truncate(recruitment.content, length: 50) %>
         </p>
         <% end %>
-      </div>
-      <div class="p-tag">
-        <span>
-          <%= fa_icon 'clock' %>
-          希望日: <%= recruitment.hope_day %>
-        </span>
       </div>
     </div>
   <% end %>

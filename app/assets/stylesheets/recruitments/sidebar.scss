@@ -1,0 +1,91 @@
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.s-title {
+  position: relative;
+  .brand-title {
+    .top-title {
+      color: $basicGreen !important;
+      font-size: 130%;
+      position: absolute;
+      left: 16%;
+      top: 15%;
+    }
+  }
+}
+
+
+.main {
+
+
+    @include pc {
+      display: flex;
+    }
+
+    .side {
+      width: 25%;
+      border-right: 1px solid $gray;
+      background: white;
+
+      @include sp {
+        display: none;
+      }
+
+      .sidebar {
+        .side-each {
+          height: 80px;
+          border-bottom: 1px solid $gray;
+
+          a {
+            text-decoration: none;
+            color: $black;
+
+            .side-around {
+              display: flex;
+              padding: 25px 45px;
+
+              p {
+
+                .s-icon {
+                  font-size: 35px;
+                }
+              }
+
+              h2 {
+                font-size: 1.7rem;
+                text-align: center;
+                margin-left: 10px;
+
+
+              }
+            }
+
+            .side-login {
+              color: #9cd75b70;
+            }
+
+            .side-signup {
+              color: $pink;
+            }
+          }
+        }
+
+        .s-logout {
+          background: $pink;
+
+          .side-log {
+            color: white;
+          }
+        }
+
+        .s-hover:hover {
+          box-shadow: 3px 5px 20px -5px gray;
+          border-right: 5px solid $basicGreen;
+        }
+      }
+    }
+  }
+

@@ -3,6 +3,13 @@
 
 
 .recruitment-wrap {
+  @include pc {
+    width: 70%;
+    margin: auto;
+  }
+
+  width: 95%;
+  margin: auto;
 
   .recruitment-around {
     padding: 20px 0 70px;
@@ -11,7 +18,7 @@
       width: 90%;
       margin: 0 auto;
       background: white;
-      border: 2px solid #cfcfcf;
+      border: 2px solid $gray;
       border-radius: 10px;
       padding: 20px 20px 50px;
 
@@ -30,7 +37,7 @@
             & h2 {
               font-size: 1.5rem;
               font-weight: bold;
-              color: #495057;
+              color: $black;
               margin-right: 10px;
             }
 
@@ -55,7 +62,7 @@
             & h2 {
               font-size: 1.5rem;
               font-weight: bold;
-              color: #495057;
+              color: $black;
               margin-right: 10px;
 
             }
@@ -70,58 +77,13 @@
           }
         }
 
-        .r-hope_day {
-          margin-top: 30px;
-
-          .hope_day-label {
-            margin-bottom: 10px;
-            display: flex;
-
-            & h2 {
-              font-size: 1.5rem;
-              font-weight: bold;
-              color: #495057;
-              margin-right: 10px;
-
-            }
-          }
-
-          .hope_day-field {
-
-          }
-        }
-
-        .r-category {
-          margin-top: 30px;
-
-          .category-label {
-            margin-bottom: 10px;
-            display: flex;
-
-            & h2 {
-              font-size: 1.5rem;
-              font-weight: bold;
-              color: #495057;
-              margin-right: 10px;
-
-            }
-          }
-
-          .category-field {
-            display: flex;
-            select {
-              width: 100%;
-              margin: 20px auto;
-            }
-          }
-        }
-
         .r-submit {
           display: flex;
+          margin-top: 20px;
 
           .submit-btn {
-            border:1px solid $orange;
-            background: $orange;
+            border:1px solid $pink;
+            background: $pink;
             border-radius: 10px;
             padding: 5px 10px;
             font-weight: bold;

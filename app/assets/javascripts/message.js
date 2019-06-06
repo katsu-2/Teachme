@@ -5,7 +5,7 @@ $(function() {
                     <p>${message.user_name}</p>
                   </div>
                   <div class="message">
-                    <p>${message.message}</p>
+                    <p class="m-green">${message.message}</p>
                   </div>
                 </div>`
     return html;
@@ -31,11 +31,15 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      var html = buildHTML(data);
-      $('.message-main').append(html)
-      $('#message_js').val('')
-      $('form')[0].reset();
-      scroll();
+      if (!data.message) {
+        $(".submit-btn").prop('disabled', false);
+      } else {
+        var html = buildHTML(data);
+        $('.message-main').append(html)
+        $('#message_js').val('')
+        $('form')[0].reset();
+        scroll();
+      }
     })
     .fail(function() {
       alert('error');

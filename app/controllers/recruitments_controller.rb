@@ -3,7 +3,7 @@ class RecruitmentsController < ApplicationController
   before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recruitments = Recruitment.recent.includes(:user)
+    @recruitments = Recruitment.page(params[:page]).per(9).recent.includes(:user)
   end
 
   def show

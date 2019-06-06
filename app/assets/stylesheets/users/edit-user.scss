@@ -1,3 +1,5 @@
+@import 'common';
+
 .user-title {
   margin-top: 35px;
   h2 {
@@ -13,7 +15,7 @@
   .select-pref {
     .pref-btn {
       width: 100%;
-      border: 1px solid #cfcfcf;
+      border: 1px solid $gray;
       border-radius: 7px;
       height: 40px;
     }
@@ -24,7 +26,7 @@
 .your-age {
   .age-form {
     width: 100%;
-      border: 1px solid #cfcfcf;
+      border: 1px solid $gray;
       border-radius: 7px;
       height: 40px;
   }
@@ -48,7 +50,7 @@
   .your-intro {
     .self-i-form {
       width: 100%;
-      border: 1px solid #cfcfcf;
+      border: 1px solid $gray;
       border-radius: 7px;
     }
   }
