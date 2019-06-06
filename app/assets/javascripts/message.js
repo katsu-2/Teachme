@@ -5,7 +5,7 @@ $(function() {
                     <p>${message.user_name}</p>
                   </div>
                   <div class="message">
-                    <p>${message.message}</p>
+                    <p class="m-green">${message.message}</p>
                   </div>
                 </div>`
     return html;

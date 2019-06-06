@@ -9,14 +9,25 @@
       </div>
       <div class="message-main">
         <% @messages.each do |message| %>
-          <div class="content">
-            <div class="message-user">
-              <p><%= message.user.name %></p>
+          <% if message.user_id == current_user.id %>
+            <div class="content">
+              <div class="message-user">
+                <p><%= message.user.name %></p>
+              </div>
+              <div class="message">
+                <p class="m-green"><%= message.message %></p>
+              </div>
             </div>
-            <div class="message">
-              <p><%= message.message %></p>
+          <% else %>
+            <div class="content">
+              <div class="message-user">
+                <p><%= message.user.name %></p>
+              </div>
+              <div class="message">
+                <p><%= message.message %></p>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
       </div>
       <div class="message-form">
