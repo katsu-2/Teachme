@@ -45,6 +45,15 @@
   text-decoration: none;
   color: #111;
 }
+
+.brand {
+  a {
+    color: $basicGreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
 .nav-signup {
   background: $pink;
   color: white;

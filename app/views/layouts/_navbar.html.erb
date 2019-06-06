@@ -2,6 +2,10 @@
 <header class="header">
   <nav class="global-nav">
     <ul class="global-nav__list">
+
+      <li class="global-nav__item brand">
+          <%= link_to 'Teachme', root_path %>
+      </li>
       <% if user_signed_in? %>
 
         <li class="global-nav__item">
