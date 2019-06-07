@@ -23,20 +23,14 @@
       <%= f.password_field :password_confirmation,  placeholder: "パスワードの確認", class: "pass-form" %>
     </div>
 
-    <div class="new-sex">
-      <div class="l-sex user-title">
-        <h2>性別</h2>
+    <div class="new-person-type">
+      <div class="radio_button">
+      <%= f.radio_button :person_type, "受講者", class: "type-form", id: "inlineRadio1" %>
+      <label class="form-check-label" for="inlineRadio1">受講者</label>
       </div>
-      <div class="but-sex">
-        <div class="sex-man">
-          <%= f.label '男性' %>
-          <%= f.radio_button :sex, :男性 %>
-        </div>
-
-        <div class="sex-women">
-          <%= f.label '女性' %>
-          <%= f.radio_button :sex, :女性 %>
-        </div>
+      <div class="radio_button">
+        <%= f.radio_button :person_type, "指導者", class: "type-form", id: "inlineRadio2" %>
+        <label class="form-check-label" for="inlineRadio2">指導者</label>
       </div>
     </div>
 
