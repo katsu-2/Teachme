@@ -5,7 +5,7 @@
     <%= render 'recruitments/sidebar' %>
   </div>
 
-  <div class="user-wrapper">
+<!--   <div class="user-wrapper">
     <div class="user">
       <div class="user-show">
         <div class="user-icon">
@@ -30,6 +30,34 @@
         </div>
         <div class="user-prof">
           <%= render 'prof' %>
+        </div>
+        <div class="message-btn">
+          <%= render 'messages/message' %>
+        </div>
+      </div>
+      <div class="user-recruit">
+        <%= render partial: 'shared/recruitment', locals: { recruitments: @recruitments } %>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="user-wrapper">
+    <div class="user">
+      <div class="user-show">
+        <div class="user-icon">
+          <%= render partial: "shared/img", locals: { user: @user } %>
+          <span><%= @user.name %></span>
+        </div>
+        <div class="user-prof">
+          <span class="u-type"><%= @user.person_type %></span>
+          <span class="u-pref"><%= @user.prefecture %></span>
+          <span class="u-age"><%= @user.age %></span>
+          <span class="u-sex"><%= @user.sex %></span>
+        </div>
+        <div class="user-intro">
+          <p class="intro">
+            <%= simple_format(@user.self_introduction) %>
+          </p>
         </div>
         <div class="message-btn">
           <%= render 'messages/message' %>
