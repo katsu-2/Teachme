@@ -16,7 +16,7 @@
     padding: 40px;
 
     @include sp {
-      width: 98%;
+      width: 100%;
       margin: auto;
     };
     .form-title {
@@ -28,7 +28,7 @@
         color: $basicGreen;
 
         @include sp {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
         }
       }
       & h2 {
@@ -68,7 +68,9 @@
     }
 
     .new-person-type {
+      margin-top: 20px;
       display: flex;
+
       .radio_button {
         @include sex;
       }
