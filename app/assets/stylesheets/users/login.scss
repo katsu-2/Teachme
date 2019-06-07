@@ -68,6 +68,7 @@
     }
 
     .new-person-type {
+      margin-top: 20px;
       display: flex;
       .radio_button {
         @include sex;
