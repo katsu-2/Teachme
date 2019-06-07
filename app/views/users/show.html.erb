@@ -5,41 +5,7 @@
     <%= render 'recruitments/sidebar' %>
   </div>
 
-<!--   <div class="user-wrapper">
-    <div class="user">
-      <div class="user-show">
-        <div class="user-icon">
-          <p>
-            <%= render partial: "shared/img", locals: { user: @user } %>
-            <% if user_signed_in? && current_user.id == @user.id %>
-            <span class="setting">
-              <%= link_to edit_user_registration_path(id: current_user.id) do %>
-                <%= icon("fas", "cog", class: "s-icon")%>
-              <% end %>
-            </span>
-            <% end %>
-          </p>
-          <div class="user-name-type">
-            <h2 class="user-name">
-              <%= @user.name %>
-            </h2>
-            <span class="user-type">
-              <%= @user.person_type %>
-            </span>
-          </div>
-        </div>
-        <div class="user-prof">
-          <%= render 'prof' %>
-        </div>
-        <div class="message-btn">
-          <%= render 'messages/message' %>
-        </div>
-      </div>
-      <div class="user-recruit">
-        <%= render partial: 'shared/recruitment', locals: { recruitments: @recruitments } %>
-      </div>
-    </div>
-  </div> -->
+
 
   <div class="user-wrapper">
     <div class="user">
@@ -48,18 +14,18 @@
           <%= render partial: "shared/img", locals: { user: @user } %>
           <span><%= @user.name %></span>
         </div>
-        <div class="user-prof">
+        <div class="user-prof m-t">
           <span class="u-type"><%= @user.person_type %></span>
           <span class="u-pref"><%= @user.prefecture %></span>
           <span class="u-age"><%= @user.age %></span>
           <span class="u-sex"><%= @user.sex %></span>
         </div>
-        <div class="user-intro">
+        <div class="user-intro m-t">
           <p class="intro">
             <%= simple_format(@user.self_introduction) %>
           </p>
         </div>
-        <div class="message-btn">
+        <div class="message-btn m-t">
           <%= render 'messages/message' %>
         </div>
       </div>
