@@ -68,7 +68,7 @@ password: 111111
 　・ JavaScript(jQuery)
 
 #### バックエンド
-　・ Rubv
+　・ Ruby
 
 　・ Rails
 
