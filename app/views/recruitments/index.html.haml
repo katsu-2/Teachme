@@ -1,8 +1,0 @@
-- provide(:title, "募集一覧")
-= render 'upper'
-%section.main
-  .side
-    = render 'sidebar'
-  .main-p
-    = render partial: 'shared/recruitment', locals: { recruitments: @recruitments }
-    = paginate(@recruitments)

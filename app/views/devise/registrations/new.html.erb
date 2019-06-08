@@ -1,0 +1,55 @@
+
+<div class="form-around">
+  <div class="signup-form">
+    <div class="form-title">
+      <h1>Teachmeへようこそ</h1>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="new-user-name">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "名前(10字以内)", class: "name-form" %>
+    </div>
+
+    <div class="new-email">
+      <%= f.email_field :email,  placeholder: "メールアドレス", class: "email-form" %>
+    </div>
+
+
+    <div class="new-pass">
+      <%= f.password_field :password,  placeholder: "パスワード", class: "pass-form" %>
+    </div>
+
+    <div class="pass-conf">
+      <%= f.password_field :password_confirmation,  placeholder: "パスワードの確認", class: "pass-form" %>
+    </div>
+
+    <div class="new-person-type">
+      <div class="radio_button">
+      <%= f.radio_button :person_type, "受講者", class: "type-form", id: "inlineRadio1" %>
+      <label class="form-check-label" for="inlineRadio1">受講者</label>
+      </div>
+      <div class="radio_button">
+        <%= f.radio_button :person_type, "指導者", class: "type-form", id: "inlineRadio2" %>
+        <label class="form-check-label" for="inlineRadio2">指導者</label>
+      </div>
+    </div>
+
+    <div class="new-prefecture">
+      <div class="pref-title user-title">
+        <h2>都道府県</h2>
+      </div>
+      <div class="select-pref">
+        <%= f.select :prefecture, User.prefectures.keys, {prompt: '選択してください'}, class: "btn pref-btn"%>
+      </div>
+    </div>
+
+    <div class="new-submit">
+      <%= f.submit "登録する",class: "submit-btn" %>
+    </div>
+
+    <% end %>
+    <div class="new-under">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

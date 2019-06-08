@@ -1,0 +1,14 @@
+<% provide(:title, "募集一覧") %>
+<%= render 'upper' %>
+
+<section class="main">
+  <div class="side">
+    <%= render 'sidebar' %>
+  </div>
+
+  <div class="main-p">
+    <%= render partial: 'shared/recruitment', locals: { recruitments: @recruitments } %>
+    <%= paginate(@recruitments) %>
+  </div>
+</section>
+

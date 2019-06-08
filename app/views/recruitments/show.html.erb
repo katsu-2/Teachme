@@ -1,0 +1,38 @@
+<% provide(:title, @recruitment.title) %>
+
+<section class="main">
+  <div class="side">
+    <%= render 'sidebar' %>
+  </div>
+  <div class="each-p">
+    <div class="p-upper">
+      <div class="p-user">
+        <p>
+          <%= link_to user_path(@user) do %>
+            <%= render partial: "shared/img", locals: { user: @user } %>
+          <% end %>
+        </p>
+        <div class="user-name">
+          <p><%= @recruitment.user.name %></p>
+        </div>
+        <div class="user-pref">
+          <p><%= @recruitment.user.prefecture %></p>
+        </div>
+      </div>
+      <div class="p-title">
+        <h2><%= @recruitment.title %></h2>
+      </div>
+    </div>
+    <div class="p-content">
+      <p>
+        <%= @recruitment.content %>
+      </p>
+      <div>
+        <% if user_signed_in? && current_user.id == @recruitment.user.id %>
+          <%= link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'} %>
+          <%= link_to '編集', edit_recruitment_path(@recruitment) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

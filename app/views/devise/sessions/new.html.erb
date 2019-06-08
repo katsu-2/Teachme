@@ -1,0 +1,26 @@
+
+<div class="form-around">
+  <div class="signup-form">
+    <div class="form-title">
+      <h1>ログインする</h1>
+    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="new-email">
+      <%= f.email_field :email, placeholder: "メールアドレス", class: "email-form" %>
+    </div>
+
+    <div class="new-pass">
+      <%= f.password_field :password,  placeholder: "パスワード", class: "pass-form" %>
+    </div>
+
+
+    <div class="new-submit">
+      <%= f.submit "ログイン",class: "submit-btn" %>
+    </div>
+    <% end %>
+    <div class="new-under">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
