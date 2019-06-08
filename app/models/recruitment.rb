@@ -8,4 +8,5 @@ class Recruitment < ApplicationRecord
 
   scope :recent, -> { order('created_at desc') }
   scope :by_students, -> { joins(:user).merge(User.student) }
+  scope :by_teachers, -> { joins(:user).merge(User.teacher) }
 end
