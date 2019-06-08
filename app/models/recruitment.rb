@@ -6,6 +6,6 @@ class Recruitment < ApplicationRecord
   validates :title, presence: true, length: {maximum: 30}
   validates :content, presence: true, length: {maximum: 1000}
 
-  scope :recent, -> { order('created_at desc') }
-  scope :by_student, -> { joins(:user).merge(User.student) }
+  scope :recents, -> { order('created_at desc') }
+  scope :by_students, -> { joins(:user).merge(User.students) }
 end
