@@ -1,0 +1,6 @@
+ja:
+  enums:
+    user:
+      person_type:
+        student: 受講者
+        teacher: 指導者
