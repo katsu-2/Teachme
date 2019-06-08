@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :groups, through: :group_users
 
 
+  scope :student, -> { where(person_type: person_type[:student]) }
 
   enum prefecture: {
     北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,
@@ -23,7 +24,7 @@ class User < ApplicationRecord
     福岡県:40,佐賀県:41,長崎県:42,熊本県:43,大分県:44,宮崎県:45,鹿児島県:46,沖縄県:47
   }
 
-  enum person_type: { 受講者: 0, 指導者: 1 }
+  enum person_type: { student: 0, teacher: 1 }
   enum sex: { 男性: 0, 女性: 1 }
 
   #validation

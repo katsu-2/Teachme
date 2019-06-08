@@ -1,17 +1,16 @@
 - students.each do |student|
-  - student.recruitments.each do |recruitment|
-    .each-p
-      .p-upper
-        .p-user
-          %p
-            = image_tag("user.png", :alt => "募集者の画像", :class => "user-pic")
-          .user-name
-            %p= student.name
-          .user-pref
-            %p= student.prefecture
-        .p-title
-          %h2= truncate(recruitment.title, length: 20)
-      .p-content
-        = link_to recruitment_path(recruitment), class: "link" do
-          %p
-            = truncate(recruitment.content, length: 50)
+  .each-p
+    .p-upper
+      .p-user
+        %p
+          = image_tag("user.png", :alt => "募集者の画像", :class => "user-pic")
+        .user-name
+          %p= student.user.name
+        .user-pref
+          %p= student.user.prefecture
+      .p-title
+        %h2= truncate(student.title, length: 20)
+    .p-content
+      = link_to recruitment_path(student), class: "link" do
+        %p
+          = truncate(student.content, length: 50)

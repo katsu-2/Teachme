@@ -14,10 +14,10 @@
         = f.email_field :email, placeholder: "メールアドレス", class: "email-form"
       .new-person-type
         .radio_button
-          = f.radio_button :person_type, "受講者", class: "type-form", id: "inlineRadio1"
+          = f.radio_button :person_type, "student", class: "type-form", id: "inlineRadio1"
           %label.form-check-label{:for => "inlineRadio1"} 受講者
         .radio_button
-          = f.radio_button :person_type, "指導者", class: "type-form", id: "inlineRadio2"
+          = f.radio_button :person_type, "teacher", class: "type-form", id: "inlineRadio2"
           %label.form-check-label{:for => "inlineRadio2"} 指導者
       .new-sex
         .l-sex.user-title

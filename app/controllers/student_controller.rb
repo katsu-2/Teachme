@@ -1,6 +1,5 @@
 class StudentController < ApplicationController
   def index
-    @users = User.where("person_type = 0")
-    @students = @users.map { |user| user }
+    @students = Recruitment.by_students.includes(:user)
   end
 end
