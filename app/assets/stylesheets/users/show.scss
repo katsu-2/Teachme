@@ -4,147 +4,82 @@
 /////////show////////////
 /////////////////////////
 
+
 .user-wrapper {
-  width: 75%;
   margin: auto;
 
-  @include sp {
-    width: 100%;
-  }
-
   .user {
-
     .user-show {
-      width: 100%;
+      margin-top: 20px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 6px;
 
-      @include sp {
-        width: 100%;
-        padding-top: 30px;
-      };
+      @include pc {
+        width: 600px;
+        border-radius: 15px;
+        border: 2px solid #cfcfcf;
+      }
 
       .user-icon {
-        & p {
-          text-align: center;
-          position: relative;
-
-          .user-pic {
-            @include avatar
-          }
-
-          .setting {
-            position: absolute;
-            top: 30%;
-            right: 30%;
-
-            a {
-              color: $black;
-              text-decoration: none;
-
-              i {
-                font-size: 1.4rem;
-              }
-            }
-          }
-        }
-        .user-name-type {
-          display: flex;
-          align-items: center;
-
-            .user-name {
-              margin: 0 auto;
-              font-size: 1.3rem;
-              color: $black;
-
-              @include sp {
-                font-size: 1.2rem;
-                font-weight: bold;
-              };
-            }
-            .user-type {
-              border: 1px solid orange;
-              border-radius: 20px;
-              background: orange;
-              margin: 0 auto;
-              font-size: 1.3rem;
-              font-weight: bold;
-              padding: 5px 10px;
-              color: white;
-
-              @include sp {
-                font-size: 0.8rem;
-              }
-            }
+        span {
+          color: $black;
         }
       }
-      .user-prof {
-        border: 1px solid #cfcfcf;
-        border-radius: 10px;
-        margin: 20px auto;
-        padding: 20px 25px;
-        background: white;
-        width: 85%;
 
-        @include sp {
-          width: 100%;
+      .user-prof {
+
+        span {
+          border-radius: 15px;
+          padding: 5px 10px;
+          margin-right: 4%;
+          background: #cfcfcfb0;
+          color: white;
         }
 
-        #my-int {
-          display: none;
+        .u-type {
+          background: orange;
+        }
+        .u-pref {
+
+        }
+        .u-age {
+
+        }
+        .u-sex {
+
+        }
+      }
+
+      .m-t {
+        margin-top: 40px;
+      }
+
+      .user-intro {
+        margin-top: 40px;
+        p {
+          font-size: 0.9rem;
         }
       }
 
       .message-btn {
-
-        @include sp {
-          height: 50px;
-        };
-
         .message {
           text-align: center;
-          font-size: 1rem;
-          margin: 5px auto;
-          height: 25px;
-          line-height: 1.4rem;
-
-          & a {
-            text-decoration: none;
-            color: white;
-
-            @include sp {
-              line-height: 1.5;
-              font-size: 1.3rem;
-            };
-          }
-
-          @include sp {
-            width: 100%;
-            height: 35px;
-          };
+          font-size: 1.1rem;
 
           .m-btn {
-            padding: 5px 100px;
+            padding: 5px 40px;
             border-radius: 20px;
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
           }
         }
       }
-    }
 
-    .user-recruit {
-      width: 100%;
-
-
-
-      .p-upper {
-        a {
-          text-decoration: none;
-          color: black;
-
-          .user-name {
-            p {
-              color: $black;
-            }
-          }
-        }
+      .user-recruit {
       }
     }
   }

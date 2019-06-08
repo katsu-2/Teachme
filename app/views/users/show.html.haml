@@ -6,20 +6,22 @@
     .user
       .user-show
         .user-icon
-          %p
-            = render partial: "shared/img", locals: { user: @user }
-            - if user_signed_in? && current_user.id == @user.id
-              %span.setting
-                = link_to edit_user_registration_path(id: current_user.id) do
-                  = icon("fas", "cog", class: "s-icon")
-          .user-name-type
-            %h2.user-name
-              = @user.name
-            %span.user-type
-              = @user.person_type
-        .user-prof
-          = render 'prof'
-        .message-btn
+          = render partial: "shared/img", locals: { user: @user }
+          %span
+            = @user.name
+        .user-prof.m-t
+          %span.u-type
+            = @user.person_type
+          %span.u-pref
+            = @user.prefecture
+          %span.u-age
+            = @user.age
+          %span.u-sex
+            = @user.sex
+        .user-intro.m-t
+          %p.intro
+            = simple_format(@user.self_introduction)
+        .message-btn.m-t
           = render 'messages/message'
       .user-recruit
         = render partial: 'shared/recruitment', locals: { recruitments: @recruitments }
