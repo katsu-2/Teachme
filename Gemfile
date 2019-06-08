@@ -19,6 +19,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'enum_help'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
