@@ -1,0 +1,27 @@
+- provide(:title, "マイページ")
+%section.main
+  .side
+    = render 'recruitments/sidebar'
+  .user-wrapper
+    .user
+      .user-show
+        .user-icon
+          = render partial: "shared/img", locals: { user: @user }
+          %span
+            = @user.name
+        .user-prof.m-t
+          %span.u-type
+            = @user.person_type
+          %span.u-pref
+            = @user.prefecture
+          %span.u-age
+            = @user.age
+          %span.u-sex
+            = @user.sex
+        .user-intro.m-t
+          %p.intro
+            = simple_format(@user.self_introduction)
+        .message-btn.m-t
+          = render 'messages/message'
+      .user-recruit
+        = render partial: 'shared/recruitment', locals: { recruitments: @recruitments }
