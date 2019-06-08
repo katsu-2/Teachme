@@ -1,0 +1,26 @@
+%section.main
+  .side
+    = render 'recruitments/sidebar'
+  .message-wrap
+    .message-around
+      .message-upper
+        %p メッセージ
+      .message-main
+        - @messages.each do |message|
+          - if message.user_id == current_user.id
+            .content.my-content
+              .content-around
+                .message-user
+                  %p= message.user.name
+                .message
+                  %p.m-green= message.message
+          - else
+            .content
+              .message-user
+                %p= message.user.name
+              .message
+                %p= message.message
+      .message-form
+        = form_for [@group, @message], html: { id: 'new_message' } do |f|
+          = f.text_field :message, class: "form-message", id: "message_js", placeholder: "メッセージを入力"
+          = f.submit '送信', class: "submit-btn"

@@ -1,0 +1,25 @@
+- provide(:title, "マイページ")
+%section.main
+  .side
+    = render 'recruitments/sidebar'
+  .user-wrapper
+    .user
+      .user-show
+        .user-icon
+          %p
+            = render partial: "shared/img", locals: { user: @user }
+            - if user_signed_in? && current_user.id == @user.id
+              %span.setting
+                = link_to edit_user_registration_path(id: current_user.id) do
+                  = icon("fas", "cog", class: "s-icon")
+          .user-name-type
+            %h2.user-name
+              = @user.name
+            %span.user-type
+              = @user.person_type
+        .user-prof
+          = render 'prof'
+        .message-btn
+          = render 'messages/message'
+      .user-recruit
+        = render partial: 'shared/recruitment', locals: { recruitments: @recruitments }

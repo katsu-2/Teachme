@@ -1,0 +1,13 @@
+.form-around
+  .signup-form
+    .form-title
+      %h1 ログインする
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .new-email
+        = f.email_field :email, placeholder: "メールアドレス", class: "email-form"
+      .new-pass
+        = f.password_field :password,  placeholder: "パスワード", class: "pass-form"
+      .new-submit
+        = f.submit "ログイン",class: "submit-btn"
+    .new-under
+      = render "devise/shared/links"
