@@ -1,6 +1,32 @@
 @import "common";
 
+.r-show {
+  width: 70%;
+  margin: auto;
 
+  @include sp {
+    width: 100%;
+  }
+}
+
+.back {
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    background: #9CD75B;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+
+    @include sp {
+      text-decoration: none;
+      background: white;
+      color: #9CD75B;
+      padding: 5px 15px;
+      border-radius: 15px;
+    }
+  }
+}
 .each-p {
   @include border;
   width: 600px;
