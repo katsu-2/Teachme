@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_094118) do
+ActiveRecord::Schema.define(version: 2019_06_09_033114) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,12 +43,8 @@ ActiveRecord::Schema.define(version: 2019_04_06_094118) do
   end
 
   create_table "recruitment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "category_id", null: false
-    t.bigint "recruitment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_recruitment_categories_on_category_id"
-    t.index ["recruitment_id"], name: "index_recruitment_categories_on_recruitment_id"
   end
 
   create_table "recruitments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -85,6 +81,4 @@ ActiveRecord::Schema.define(version: 2019_04_06_094118) do
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
-  add_foreign_key "recruitment_categories", "categories"
-  add_foreign_key "recruitment_categories", "recruitments"
 end
