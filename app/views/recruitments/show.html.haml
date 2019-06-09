@@ -2,22 +2,25 @@
 %section.main
   .side
     = render 'sidebar'
-  .each-p
-    .p-upper
-      .p-user
+  .r-show
+    .back
+      = link_to '戻る', :back
+    .each-p
+      .p-upper
+        .p-user
+          %p
+            = link_to user_path(@user) do
+              = render partial: "shared/img", locals: { user: @user }
+          .user-name
+            %p= @recruitment.user.name
+          .user-pref
+            %p= @recruitment.user.prefecture
+        .p-title
+          %h2= @recruitment.title
+      .p-content
         %p
-          = link_to user_path(@user) do
-            = render partial: "shared/img", locals: { user: @user }
-        .user-name
-          %p= @recruitment.user.name
-        .user-pref
-          %p= @recruitment.user.prefecture
-      .p-title
-        %h2= @recruitment.title
-    .p-content
-      %p
-        = @recruitment.content
-      %div
-        - if user_signed_in? && current_user.id == @recruitment.user.id
-          = link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'}
-          = link_to '編集', edit_recruitment_path(@recruitment)
+          = simple_format(@recruitment.content)
+        %div
+          - if user_signed_in? && current_user.id == @recruitment.user.id
+            = link_to '削除', recruitment_path(@recruitment), method: :delete, data: {confirm: '本当にいいですか？'}
+            = link_to '編集', edit_recruitment_path(@recruitment)
