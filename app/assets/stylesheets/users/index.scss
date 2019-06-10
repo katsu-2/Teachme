@@ -5,10 +5,13 @@
 
 
 .index-wrapper {
+  width: 70%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 
   @include sp {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
   };
