@@ -3,7 +3,7 @@
     = render 'recruitments/sidebar'
   .group-wrap
     .group-around
-      - @anotherGroupUsers.includes(:user).includes(:group).each do |user|
+      - @another_group_users.includes(:user).includes(:group).each do |user|
         .each-message
           .your-img
             %p

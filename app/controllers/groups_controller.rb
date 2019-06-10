@@ -1,13 +1,14 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_current_group_user
+  before_action :set_current_group_user, only: [:index]
 
   def index
-    myGroupIds = @currentGroupUsers.each_with_object([]) do |group, arr|
+    my_group_ids = @current_group_users.each_with_object([]) do |group, arr|
       arr << group.group.id
     end
 
-    @anotherGroupUsers = GroupUser.where(group_id: myGroupIds).where.not(user_id: current_user.id)
+    # @anotherGroupUsers = GroupUser.where(group_id: myGroupIds).where.not(user_id: current_user.id)
+    @another_group_users = GroupUser.where(group_id: my_group_ids).where.not(user_id: current_user.id)
   end
 
 
@@ -24,7 +25,7 @@ class GroupsController < ApplicationController
   end
 
   def set_current_group_user
-    @currentGroupUsers ||= current_user.group_users.includes(:group)
+    @current_group_users ||= current_user.group_users.includes(:group)
   end
 
 end
