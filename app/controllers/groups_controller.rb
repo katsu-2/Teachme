@@ -7,15 +7,18 @@ class GroupsController < ApplicationController
       arr << group.group.id
     end
 
-    # @anotherGroupUsers = GroupUser.where(group_id: myGroupIds).where.not(user_id: current_user.id)
-    @another_group_users = GroupUser.where(group_id: my_group_ids).where.not(user_id: current_user.id)
+    @another_group_users = GroupUser.belongs_to_group_id(my_group_ids).your_id(current_user.id)
+
   end
 
 
   def create
-    @group = Group.create(group_params)
-
-    redirect_to groups_path
+    @group = Group.new(group_params)
+    if @group.save
+      redirect_to groups_path
+    else
+      render 'index'
+    end
   end
 
 
