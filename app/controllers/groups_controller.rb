@@ -1,20 +1,24 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_current_group_user
+  before_action :set_current_group_user, only: [:index]
 
   def index
-    myGroupIds = @currentGroupUsers.each_with_object([]) do |group, arr|
+    my_group_ids = @current_group_users.each_with_object([]) do |group, arr|
       arr << group.group.id
     end
 
-    @anotherGroupUsers = GroupUser.where(group_id: myGroupIds).where.not(user_id: current_user.id)
+    @another_group_users = GroupUser.belongs_to_group_id(my_group_ids).your_id(current_user.id)
+
   end
 
 
   def create
-    @group = Group.create(group_params)
-
-    redirect_to groups_path
+    @group = Group.new(group_params)
+    if @group.save
+      redirect_to groups_path
+    else
+      render 'index'
+    end
   end
 
 
@@ -24,7 +28,7 @@ class GroupsController < ApplicationController
   end
 
   def set_current_group_user
-    @currentGroupUsers ||= current_user.group_users.includes(:group)
+    @current_group_users ||= current_user.group_users.includes(:group)
   end
 
 end
