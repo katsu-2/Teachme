@@ -9,9 +9,9 @@
       .new-email
         = f.email_field :email,  placeholder: "メールアドレス", class: "email-form"
       .new-pass
-        = f.password_field :password,  placeholder: "パスワード", class: "pass-form"
+        = f.password_field :password,  placeholder: "パスワード(6文字以上)", class: "pass-form"
       .pass-conf
-        = f.password_field :password_confirmation,  placeholder: "パスワードの確認", class: "pass-form"
+        = f.password_field :password_confirmation,  placeholder: "パスワードの確認(6文字以上)", class: "pass-form"
       .new-person-type
         .radio_button
           = f.radio_button :person_type, "student", class: "type-form", id: "inlineRadio1"
