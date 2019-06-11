@@ -13,12 +13,16 @@
                 %p 必須
               .title-field
                 = f.text_field :title, class: "form-control" ,placeholder: "(例)野球の指導をして下さる方いませんか？"
+              .title-count
+                %p#t-count 0文字
             .r-content
               .content-label
                 %h2 募集内容
                 %p 必須
               .content-field
                 = f.text_area :content, class: "form-control",placeholder: "どういう人にどういった事を指導して欲しいのか具体的に書いてください。 |
-                  (例)高校野球で4番を打っていた人に自分のスイングを見てどこがおかしいか指導して欲しい。", rows: 13                                      |
+                  (例)高校野球で4番を打っていた人に自分のスイングを見てどこがおかしいか指導して欲しい。", rows: 13 |
+              .content-count
+                %p#c-count 0文字
             .r-submit
               = f.submit "募集する", class: "submit-btn"
