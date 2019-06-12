@@ -23,5 +23,8 @@
             = simple_format(@user.self_introduction)
         .message-btn.m-t
           = render 'messages/message'
+        .user-edit
+          %h2
+            = link_to 'ユーザー編集', edit_user_registration_path, class: 'user-edit-btn'
       .user-recruit
         = render partial: 'shared/recruitment', locals: { recruitments: @recruitments }
