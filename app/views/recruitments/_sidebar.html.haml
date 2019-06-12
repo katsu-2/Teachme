@@ -35,17 +35,17 @@
         .side-around.side-log
           %p= icon("fas", "user-plus", class: "s-icon")
           %h2 新規登録
-  .s-recruitment.side-each.s-hover
+  .s-recruitment.side-each.s-hover.root
     = link_to recruitments_path do
       .side-around
         %p= icon("fas", "mail-bulk", class: "s-icon")
         %h2 全投稿
-  .s-teacher.side-each.s-hover
+  .s-teacher.side-each.s-hover.teacher
     = link_to teacher_index_path, id: "teacher" do
       .side-around
         %p= icon("fas", "user-tie", class: "s-icon")
         %h2 指導者
-  .s-student.side-each.s-hover
+  .s-student.side-each.s-hover.student
     = link_to student_index_path, id: "student" do
       .side-around
         %p= icon("fas", "user-graduate", class: "s-icon")
