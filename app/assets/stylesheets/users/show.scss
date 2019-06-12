@@ -79,6 +79,26 @@
         }
       }
 
+      .user-edit {
+        margin-top: 40px;
+
+        h2 {
+          text-align: center;
+          font-size: 1.1rem;
+
+          a {
+            text-decoration: none;
+            color: $black;
+          }
+          .user-edit-btn {
+            background: $contentGray;
+            color: white;
+            padding: 5px 30px;
+            border-radius: 15px;
+          }
+        }
+      }
+
       .user-recruit {
       }
     }
