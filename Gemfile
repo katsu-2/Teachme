@@ -20,6 +20,9 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'enum_help'
+gem 'fog-aws', '~> 3.5', '>= 3.5.1'
+gem 'rmagick', '~> 3.2'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
